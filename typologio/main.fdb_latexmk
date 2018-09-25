@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1537916229 "main.tex" "/home/vangelis/Desktop/My_Projects/typologio/main.pdf" "main" 1537916637
+["pdflatex"] 1537916229 "main.tex" "/home/vangelis/Desktop/My_Projects/typologio/main.pdf" "main" 1537917182
   "../definitions.tex" 1537915411 867 6a8212755298fc5fb9961447e1ba80fb ""
   "../preamble.tex" 1537915411 2860 c229071a44fec0d9365af0a6283aaff4 ""
   "/etc/texmf/web2c/texmf.cnf" 1537882872 1101 af7716885e081ab43982cab7b4672c1a ""
@@ -182,9 +182,9 @@
   "probabilities.tex" 1537884857 5446 b95ea2919be0fb9e2d44c66407c80eb6 ""
   "tautothtes.tex" 1537884857 2902 5ee95855411f4431cb9b5481c18bc9bd ""
   (generated)
-  "main.log"
-  "main.out"
   "/home/vangelis/Desktop/My_Projects/typologio/main.log"
+  "main.log"
   "main.pdf"
   "/home/vangelis/Desktop/My_Projects/typologio/main.pdf"
+  "main.out"
   "main.aux"
