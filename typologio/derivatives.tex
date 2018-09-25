@@ -1,0 +1,114 @@
+
+\section{Παράγωγοι}
+
+\subsection{Ορισμός}
+
+ Η \textcolor{blue}{παράγωγος} της συνάρτησης $y=f(x)$ ως προς $x$ ορίζεται να είναι το όριο
+\[
+\lim_{h\to 0}\frac{f(x+h)-f(x)}{h} = \lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
+\]
+όταν αυτό υπάρχει για κάθε σημείο στο πεδίο ορισμού της, όπου $h=\Delta x$. Η παράγωγος συνάρτηση συμβολίζεται με $\dv{f}{x}=f'(x)=y'$.
+
+
+\subsection{Παράγωγοι Βασικών Συναρτήσεων}
+
+
+  \begin{tabular}{@{}>{$}l<{$}@{}}
+    \dv{x}(c) = 0  \\
+    \dv{x}(x) = 1  \\
+    \dv{x}(x^{a}) = ax^{a-1}, \qq{$a\in\mathbb{R}$}  \\
+    \dv{x}(\sqrt{x}) = \frac{1}{2\sqrt{x}}  \\
+    \dv{x}(\frac{1}{x}) = {-\frac{1}{x^{2}}}  \\
+    \dv{x}(a^{x}) = a^{x}\ln a, \qq{$a>0$}   \\
+    \dv{x}(e^{x}) = e^{x} \\
+    \dv{x}(\log_{a}x) = \frac{1}{x}\cdot \log_{a}e, \qq{$a>0$, $a\neq 1$} \\
+    \dv{x}(\ln x) = \frac{1}{x}
+  \end{tabular}
+
+
+\subsection{Παραγωγοι Τριγωνομετρικών και Αντίστροφων Τριγωνομετρικών Συναρτήσεων}
+
+
+  \begin{tabular}{@{}*{2}{>{$}l<{$}}@{}}
+    \dv{x}(\sin x) = \cos x  & \dv{x}(\sin^{-1}x) =  \frac{1}{\sqrt{1-x^{2}}}, \qq{$-\frac{\pi}{2}<\sin^{-1}x<\frac{\pi}{2}$} \\
+    \dv{x}(\cos x) = -\sin x & \dv{x}(\cos^{-1}x) = \frac{-1}{\sqrt{1-x^2}}, \qq{$0<\cos^{-1}x<\pi$} \\
+    \dv{x}(\tan x) = \frac{1}{\cos^{2}x}  & \dv{x}(\tan^{-1}x) = \frac{1}{1+x^{2}}, \qq{$-\frac{\pi}{2}<\tan^{-1}x<\frac{\pi}{2}$} \\
+    \dv{x}(\cot x) = -\frac{1}{\sin^{2}x} & \dv{x}(\cot^{-1}x) = \frac{-1}{1+x^{2}}, \qq{$0<\cot^{-1}x<\pi$} \\
+    \dv{x}(\sec x) = \sec x \cdot \tan x & \dv{x}(\sec^{-1}x) = \begin{cases}
+      \frac{1}{x\sqrt{x^{2}-1}}, \qq{αν $0<\sec^{-1}x<\frac{\pi}{2}$} \\ \frac{-1}{x\sqrt{x^{2}-1}}, \qq{αν $\frac{\pi}{2}<\sec^{-1}x<\pi$}
+    \end{cases} \\
+    \dv{x}(\csc x) = -\csc x \cdot \cot x & \dv{x}(\csc^{-1}x) =
+    \begin{cases}
+      \frac{-1}{x\sqrt{x^{2}-1}}, \qq{αν $0<\csc^{-1}x<\frac{\pi}{2}$} \\ \frac{1}{x\sqrt{x^{2}-1}}, \qq{αν $-\frac{\pi}{2}<\csc^{-1}x<0$}
+    \end{cases} \\
+  \end{tabular}
+
+
+\subsection{Παραγωγοι Υπερβολικών και Αντίστροφων Υπερβολικών Συναρτήσεων}
+
+
+  \begin{tabular}{@{}*{2}{>{$}l<{$}}@{}}
+    \dv{x}(\sinh x) = \cosh x & \dv{x}(\sinh^{-1}x) = \frac{1}{\sqrt{x^{2}+1}} \\
+    \dv{x}(\cosh x) = \sinh x & \dv{x}(\cosh^{-1}x) =
+    \begin{cases}
+      \frac{1}{\sqrt{x^{2}-1}}, \qq{αν $\cosh^{-1}x > 0$, $x>1$} \\
+      \frac{-1}{\sqrt{x^{2}-1}}, \qq{αν $\cosh^{-1}x < 0$, $x>1$}
+    \end{cases} \\
+    \dv{x}(\tanh x) = \sech^{2}x & \dv{x}(\tanh^{-1}x) = \frac{1}{1-x^{2}}, \qq{αν $-1<x<1$} \\
+    \dv{x}(\coth x) = -\csch^{2}x  & \dv{x}(\coth^{-1}x) = \frac{1}{1-x^{2}}, \qq{αν $x>1$ ή $x<-1$} \\
+    \dv{x}(\sech x) = -\sech x\cdot \tanh x & \dv{x}(\sech^{-1}x) =
+    \begin{cases}
+      \frac{-1}{x\sqrt{1-x^{2}}}, \qq{αν $\sech^{-1}x > 0$, $0<x<1$} \\
+      \frac{1}{x\sqrt{1-x^{2}}}, \qq{αν $\sech^{-1}x < 0$, $0<x<1$}
+    \end{cases} \\
+    \dv{x}(\csch x) = -\csch x\cdot \coth x & \dv{x}(\csch^{-1}x) =
+    \begin{cases}
+      \frac{-1}{x\sqrt{1+x^{2}}}, \qq{αν $x>0$} \\
+      \frac{1}{x\sqrt{1+x^{2}}}, \qq{αν $x<0$} \\
+    \end{cases}
+  \end{tabular}
+
+
+
+
+\subsection{Κανόνες Παραγώγισης}
+
+Έστω $f=f(x)$, $g=g(x)$ και $h=h(x)$, $a$, $b$, $c$ και $n$ σταθερές.
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+    \dv{x}(cf) = c\dv{f}{x} \\
+    \dv{x}(f\pm g) = \dv{f}{x} \pm \dv{g}{x} \\
+    \dv{x}(f g) = f \dv{g}{x} + g \dv{f}{x} \\
+    \dv{x}(\frac{f}{g}) = \frac{f\dv{g}{x}-g\dv{f}{x}}{g^{2}} \\
+    \dv{x}(fgh) = fg\dv{h}{x} + fh\dv{g}{x} + gh\dv{f}{x} \\
+\end{tabular}
+
+
+\subsection{Σύνθετη Παραγώγιση}
+
+Έστω $y=f(u)$ και $u=g(x)$. Τότε
+
+\[
+  \dv{y}{x} = \dv{y}{u}\cdot \dv{u}{x} \qq{(Κανόνας Αλυσίδας)} \\
+\]
+Ο παραπάνω τύπος γενικεύεται και για συναρτήσεις που είναι σύνθεση περισσότερων των δύο συναρτήσεων, όπως για παράδειγμα, αν $y=f(u)$, $u=g(v)$ και $v=h(x)$, τότε
+\[
+  \dv{y}{x} = \dv{y}{u}\cdot \dv{u}{v}\cdot \dv{v}{x}
+\]
+
+
+\subsection{Παράγωγος Αντίστροφης Συνάρτησης}
+
+Έστω $y=f(x)$, συνεχής και γνησίως μονότονη συνάρτηση. Τότε ορίζεται η αντίστροφη συνάρτηση $x=f^{-1}(y)$ και ισχύει:
+
+\[
+  \dv{x}{y}=\frac{1}{\dv{y}{x}}
+\]
+
+\subsection{Παράγωγοι Ανώτερης Τάξης}
+
+\begin{tabular}{@{}l>{$}l<{$}@{}}
+  Δεύτερη Παράγωγος & \dv{x}(\dv{y}{x}) = \dv[2]{y}{x} = f''(x) = y'' \\
+  Τρίτη Παράγωγος & \dv{x}(\dv[2]{y}{x}) = \dv[3]{y}{x} = f'''(x) = y''' \\
+  Παράγωγος τάξης $n$ & \dv{x}(\dv[n-1]{y}{x}) = \dv[n]{y}{x} = f^{(n)}(x) = y^{(n)}
+\end{tabular}

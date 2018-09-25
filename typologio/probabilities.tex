@@ -1,0 +1,115 @@
+
+
+
+
+\section{Πιθανότητες}
+
+\subsection*{Αξιώματα του \textlatin{Kolmogorov}}
+
+Έστω $S$ ένας δειγματικός χώρος και έστω $\boldsymbol{B}$ το σύνολο όλων των ενδεχομένων του $S$. Ορίζουμε ως συνάρτηση πιθανότητας μια συνάρτηση $P \colon \boldsymbol{B} \to \mathbb{R}$, η οποία σε κάθε ενδεχόμενο $A$ αντιστοιχεί έναν πραγματικό αριθμό $P(A)$ έτσι ώστε να ικανοποιούνται τα παρακάτω αξιώματα:
+\begin{enumerate}[i)]
+  \item $P(A) \geq 0$
+  \item $P(S) = 1$
+  \item $\smash{P\left(\bigcup\limits_{i=1}^{\infty}A_{i}\right) = P(A_{1}) + P(A_{2}) + \cdots + P(A_{n})}$
+\end{enumerate}
+
+\subsection*{Βασικά Θεωρήματα Πιθανοτήτων}
+
+\begin{thm}
+Για κάθε ενδεχόμενο $A$ ισχύει $P(A') = 1 - P(A)$
+\end{thm}
+
+\begin{thm}
+  Ισχύει ότι $P(\emptyset) = 0$
+\end{thm}
+
+\begin{thm}
+Για κάθε ενδεχόμενο $A$ ισχύει $P(A) \leq 1$
+\end{thm}
+
+\begin{thm}\label{prob_law}
+  Για οποιαδήποτε ενδεχόμενα $A_{1}$ και $A_{2}$ ισχύει:
+  \[
+P(A_{1} \cup A_{2}) = P(A_{1}) + P(A_{2}) - P(A_{1} \cap A_{2})
+  \]
+\end{thm}
+
+\begin{remarks}  \mbox{}
+\begin{itemize}
+  \item Το θεώρημα~\ref{prob_law} γενικεύεται για την περίπτωση $n$ ενδεχομένων. Στην περίπτωση όπου $n=3$ γίνεται:
+\begin{multline*}
+P(A_{1} \cup A_{2} \cup A_{3}) = P(A_{1}) + P(A_{2}) + P(A_{3}) -   P(A_{1} \cap A_{2}) - \\ -  P(A_{1} \cap A_{3}) -  P(A_{2} \cap A_{3}) -  P(A_{1} \cap A_{2} \cap A_{3})
+\end{multline*}
+
+ \item Για δύο ενδεχόμενα τα οποία είναι ασυμβίβαστα το θεώρημα~\ref{prob_law} οδηγεί στο συμπέρασμα:
+ \[
+P(A_{1} \cup A_{2}) = P(A_{1}) + P(A_{2}), \quad A_{1} \cup A_{2} = \emptyset
+ \]
+το οποίο είναι ειδική περίπτωση του $3$ου αξιώματος.
+\end{itemize}
+\end{remarks}
+
+\subsection*{Δεσμευμένη Πιθανότητα}
+
+  \begin{gather*}
+    P(A_{1} \mid A_{2}) = \frac{P(A_{1} \cap A_{2})}{P(A_{2})}, \quad P(A_{2}) \geq 0 \\
+    P(A_{2} \mid A_{1}) = \frac{P(A_{1} \cap A_{2})}{P(A_{1})}, \quad P(A_{1}) \geq 0
+  \end{gather*}
+
+\subsection*{Ανεξάρτητα Ενδεχόμενα}
+
+\begin{itemize}
+  \item $2$ ενδεχόμενα $A_{1}, A_{2}$ είναι \textit{ανεξάρτητα} αν $P(A_{1} \cap A_{2}) =  P(A_{1}) \cdot P(A_{2})$.
+  \item $3$ ενδεχόμενα $A_{1}, A_{2}, A_{3}$ είναι \textit{ανεξάρτητα} αν
+  \begin{align*}
+    P(A_{1} \cap A_{2}) &=  P(A_{1}) \cdot P(A_{2}) \\
+    P(A_{1} \cap A_{3}) &=  P(A_{1}) \cdot P(A_{3}) \\
+    P(A_{2} \cap A_{3}) &=  P(A_{2}) \cdot P(A_{3}) \\
+    P(A_{1} \cap A_{2} \cap A_{3}) &=  P(A_{1}) \cdot P(A_{2}) \cdot P(A_{3}).
+  \end{align*}
+  \item $n$ ενδεχόμενα $A_{1}, A_{2}, \ldots, A_{n}$ είναι \textit{ανεξάρτητα} αν για κάθε συνδυασμό δύο ή περισσοτέρων από αυτά ισχύει
+\[
+P\left(\bigcap\limits_{j=1}^{k}A_{i_{j}}\right)=P(A_{i_{1}} \cap A_{i_{2}} \cap \cdots \cap A_{i_{k}}) = P(A_{i_{1}}) \cdot P(A_{i_{2}}) \cdots P(A_{i_{k}}),
+\]
+με $1 \leq i_{1} \leq i_{2} \leq \cdots \leq i_{k} \leq n$.
+\end{itemize}
+
+\subsection*{Ενδεχόμενα Ανεξάρτητα κατά Ζεύγη}
+
+Τα ενδεχόμενα  $A_{1}, A_{2}, \ldots, A_{n}$ λέγονται ανεξάρτητα κατά ζεύγη αν
+\[
+ P(A_{1} \cap A_{2}) =  P(A_{1}) \cdot P(A_{2}), \quad \text{για κάθε} \quad i,j = 1,2, \ldots, n, \quad i \neq j.
+\]
+ Προφανώς, $n$ ενδεχόμενα μπορεί να είναι ανεξάρτητα κατά ζεύγη χωρίς να είναι ανεξάρτητα.
+
+\subsection*{Κανόνας Πολλαπλασιασμού Πιθανοτήτων}
+
+\begin{itemize}
+  \item Για $2$ ενδεχόμενα
+\[
+P(A_{1} \cap A_{2}) = P(A_{1}) \cdot P(A_{2} \mid A_{1}) = P(A_{2}) \cdot P(A_{1} \mid A_{2})
+\]
+
+\item Για $3$ ενδεχόμενα
+\[
+P[A_{1} \cap A_{2} \cap A_{3}] = P[A_{1}] \cdot P[A_{2} \mid A_{1}] \cdot P[A_{3} \mid A_{1} \cap A_{2}]
+\]
+
+\item Για $n$ ενδεχόμενα
+\[
+P[A_{1} \cap A_{2} \cap \cdots \cap A_{n}] = P[A_{1}] \cdot P[A_{2} \mid A_{1}] \cdot P[A_{3} \mid A_{1} \cap A_{2}] \cdots P\left[A_{n} \Biggm| \bigcap\limits_{i=1}^{n-1} A_{i}\right]
+\]
+\end{itemize}
+
+\subsection*{Θεώρημα της Ολικής Πιθανότητας}
+
+Έστω ότι $A_{1}, A_{2}, \ldots, A_{n}$ είναι μια διαμέριση του δειγματικού χώρου $S$ τέτοια ώστε $P(A_{i}) \neq 0$, $i = 1,2, \ldots, n$. Τότε για κάθε ενδεχόμενο $E$ έχουμε ότι
+\[
+P(E) = \sum_{i=1}^{n}P(A_{i}) \cdot P(E \mid A_{i})
+\]
+
+\subsection*{Θεώρημα του \textlatin{Bayes}}
+Έστω ότι $A_{1}, A_{2}, \ldots, A_{n}$ είναι μια διαμέριση του δειγματικού χώρου $S$ τέτοια ώστε $P(A_{i}) \neq 0$, $i = 1,2, \ldots, n$. Τότε για κάθε ενδεχόμενο $E$ με $P(E) > 0$ έχουμε ότι
+\[
+P(A_{k} \mid E) = \frac{P(A_{k}) \cdot P(E \mid A_{k})}{\sum_{i=1}^{n}P(A_{i}) \cdot P(E \mid A_{i})} = \frac{P(A_{k}) \cdot P(E \mid A_{k})}{P(E)}
+\]

@@ -1,0 +1,23 @@
+
+
+
+
+\section{Συντελεστές Ευθείας Παλινδρόμησης}
+
+\begin{align*}
+  \hat{Y}&=\hat{\beta}_{0}+\hat{\beta}_{1}X \\
+  \hat{\beta}_{1}&=\frac{\sum[(Y_{i}-\overline{Y})(X_{i}-\overline{X})]}{\sum[(X_{i}-\overline{X})^{2}]} = \frac{\sum X_{i}Y_{i}-\frac{\sum X_{i}\sum Y_{i}}{n}}{\sum X_{i}^{2}-\frac{(\sum X_{i}^{2})}{n}} \\
+  \hat{\beta}_{0}&=\frac{\sum Y_{i}}{n}-\hat{\beta}_{1}\frac{\sum X_{i}}{n}=\overline{Y}-\hat{\beta}_{1}\overline{X}
+\end{align*}
+
+\section{Συντελεστής Συσχέτισης}
+
+\begin{equation*}
+  r=\frac{\sum[(Y_{i}-\overline{Y})(X_{i}-\overline{X})]}{\sqrt{\sum(Y_{i}-\overline{Y})^{2}\sum(X_{i}-\overline{X})^{2}}} = \frac{\sum X_{i}Y_{i}-\frac{\sum X_{i}\sum Y_{i}}{n}}{\sqrt{[\sum X_{i}^{2}-\frac{(\sum X_{i})^{2}}{n}][\sum Y_{i}^{2}-\frac{(\sum Y_{i})^{2}}{n}]}},  r\in [-1,1]
+\end{equation*}
+
+\section{Συντελεστής Προσδιορισμού}
+
+\begin{equation*}
+  R^{2}=\frac{(\sum[(Y_{i}-\overline{Y})(X_{i}-\overline{X})])^{2}}{\sum(Y_{i}-\overline{Y})^{2}\sum(X_{i}-\overline{X})^{2}} = \frac{(\sum X_{i}Y_{i}-\frac{\sum X_{i}\sum Y_{i}}{n})^{2}}{[\sum X_{i}^{2}-\frac{(\sum X_{i})^{2}}{n}][\sum Y_{i}^{2}-\frac{(\sum Y_{i})^{2}}{n}]},  R^{2}\in [0,1]
+\end{equation*}

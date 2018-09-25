@@ -1,0 +1,51 @@
+
+
+\begin{align*}
+  (x+y)^{2}&=x^{2}+2xy+y^{2} \\
+  (x-y)^{2}&=x^{2}-2xy+y^{2} \\
+  (x+y)^{3}&=x^{3}+3x^{2}y+3xy^{2}+y^{3} \\
+  (x-y)^{3}&=x^{3}-3x^{2}y+3xy^{2}-y^{3} \\
+  (x+y)^{4}&=x^{4}+4x^{3}y+6x^{2}y^{2}+4xy^{3}+y^{4} \\
+  (x-y)^{4}&=x^{4}-4x^{3}y+6x^{2}y^{2}-4xy^{3}+y^{4} \\
+  (x+y)^{5}&=x^{5}+5x^{4}y+10x^{3}y^{2}+10x^{2}y^{3}+5xy^{4}+y^{5} \\
+  (x-y)^{5}&=x^{5}-5x^{4}y+10x^{3}y^{2}-10x^{2}y^{3}+5xy^{4}-y^{5} \\
+  (x+y)^{6}&=x^{6}+6x^{5}y+15x^{4}y^{2}+20x^{3}y^{3}+15x^{2}y^{4}+6xy^{5}+y^{6} \\
+  (x-y)^{6}&=x^{6}-6x^{5}y+15x^{4}y^{2}-20x^{3}y^{3}+15x^{2}y^{4}-6xy^{5}+y^{6} \\
+\end{align*}
+
+\begin{align*}
+  x^{2}-y^{2}&=(x-y)(x+y) \\
+  x^{3}-y^{3}&=(x-y)(x^{2}+xy+y^{2}) \\
+  x^{3}+y^{3}&=(x+y)(x^{2}-xy+y^{2}) \\
+  x^{4}-y^{4}&=(x-y)(x^{3}+x^{2}y+xy^{2}+y^{3}) \\
+    &=(x^{2}-y^{2})(x^{2}+y^{2})=(x-y)(x+y)(x^{2}+y^{2}) \\
+  x^{4}+y^{4}&=(x^{2}-\sqrt{2}xy+y^{2})(x^{2}+\sqrt{2}xy+y^{2}) \\
+  x^{5}-y^{5}&=(x-y)(x^{4}+x^{3}y+x^{2}y^{2}+xy^{3}+y^{4}) \\
+  x^{5}+y^{5}&=(x+y)(x^{4}-x^{3}y+x^{2}y^{2}-xy^{3}+y^{4}) \\
+  x^{6}-x^{6}&=(x^{2}-y^{2})(x^{4}+x^{2}y^{2}+y^{4})=(x-y)(x+y)(x^{4}+x^{2}y^{2}+y^{4}) \\
+  &=(x-y)(x+y)(x^{2}+xy+y^{2})(x^{2}-xy+y^{2}) \\
+  x^{3}+x^{2}y+xy^{2}+y^{3}&=(x+y)(x^{2}+y^{2}) \\
+  x^{4}+x^{2}y^{2}+y^{4}&=(x^{2}+xy+y^{2})(x^{2}-xy+y^{2}) \\
+  x^{5}+x^{4}y+x^{3}y^{2}+x^{2}y^{3}+xy^{4}+y^{5}&=(x+y)(x^{2}-xy+y^{2})(x^{2}+xy+y^{2})\\
+  (x+y+z)^{2}&=x^{2}+y^{2}+z^{2}+2xy+2yz+2zx \\
+  (x+y+z)^{3}&=x^{3}+y^{3}+z^{3}+3x^{2}y+3xy^{2}+3y^{2}z+3yz^{2}+3z^{2}x+3zx^{2}+6xyz \\
+  (x+y+z+w)^{2}&=x^{2}+y^{2}+z^{2}+w^{2}+2xy+2xz+2xw+2yz+2yw+2zw\\
+\end{align*}
+
+
+\begin{align*}
+  x^{2n+1}-y^{2n+1}&=(x-y)(x^{2n}+x^{2n-1}y+x^{2n-2}y^{2}+\cdots+y^{2n}) \\
+    &=(x-y)\left(x^{2}-2xy\cos \frac{2\pi}{2n+1}+y^{2}\right)\left(x^{2}-2xy\cos \frac{4\pi}{2n+1}+y^{2}\right)\cdots\left(x^{2}-2xy\cos \frac{2n\pi}{2n+1}+y^{2}\right) \\
+    &=(x-y)\prod_{k=1}^{n}\left(x^{2}-2xy\cos \frac{2k\pi}{2n+1}+y^{2}\right) \\
+  x^{2n+1}+y^{2n+1}&=(x+y)(x^{2n}-x^{2n-1}y+x^{2n-2}y^{2}-\cdots+y^{2n}) \\
+    &=(x+y)\left(x^{2}+2xy\cos \frac{2\pi}{2n+1}+y^{2}\right)\left(x^{2}+2xy\cos \frac{4\pi}{2n+1}+y^{2}\right)\cdots\left(x^{2}+2xy\cos \frac{2n\pi}{2n+1}+y^{2}\right) \\
+    &=(x+y)\prod_{k=1}^{n}\left(x^{2}+2xy\cos \frac{2k\pi}{2n+1}+y^{2}\right) \\
+  x^{2n}-y^{2n}&=(x-y)(x+y)(x^{n-1}+x^{n-2}y+x^{n-3}y^{2}+\cdots)(x^{n-1}-x^{n  n-2}y+x^{n-3}y^{2}-\cdots) \\
+    &=(x-y)(x+y)\left(x^{2}-2xy\cos \frac{\pi}{n}+y^{2}\right)\left(x^{2}-2xy\cos \frac{2\pi}{n}+y^{2}\right)\cdots\left(x^{2}-2xy\cos \frac{(n-1)\pi}{n}+y^{2}\right)\\
+    &=(x-y)(x+y)\prod_{k=1}^{n-1}\left(x^{2}-2xy\cos \frac{k\pi}{n}+y^{2}\right)\\
+  x^{2n}+y^{2n}&=\left(x^{2}+2xy\cos \frac{\pi}{2n}+y^{2}\right)\left(x^{2}+2xy\cos           \frac{3\pi}{2n}+y^{2}\right)\cdots\left(x^{2}+2xy\cos \frac{(2n-1)\pi}{2n}+y^{2}\right) \\
+  &=\prod_{k=0}^{n-1}\left(x^{2}+2xy\cos \frac{(2k+1)\pi}{2n}+y^{2}\right)
+\end{align*}
+
+
+

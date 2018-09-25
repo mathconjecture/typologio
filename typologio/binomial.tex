@@ -1,0 +1,82 @@
+
+
+\section{Παραγοντικό}
+
+Αν $n=1,2,3,\ldots$ τότε το $\bm{n}$ \textbf{\color{blue} παραγοντικό} ορίζεται ως:
+\[
+n~=n(n-1)\cdot\cdots\cdot3\cdot 2\cdot 1 \\
+\]
+Ορίζουμε επίσης:
+\[
+0!=1
+\]
+
+\section{Διωνυμικό Ανάπτυγμα}
+
+\subsection{Τύπος του Διωνύμου}
+
+Αν $n=1,2,3,\ldots$ τότε:
+\[
+(x+y)^{n}=x^{n}+nx^{n-1}y+\frac{n(n-1)}{2!}x^{n-2}y^{2}+\frac{n(n-1)(n-2)}{3!}x^{n-3}y^3+\cdots+y^{n}
+\]
+
+\subsection{Διωνυμικοί Συντελεστές}
+
+Αν $0\leq k\leq n$ με $n=1,2,3,\ldots$ τότε ο παραπάνω τύπος μπορεί να ξαναγραφεί ως:
+\[
+(x+y)^{n}=x^{n}+\binom{n}{1}x^{n-1}y+\binom{n}{2}x^{n-2}y^{2}+\binom{n}{3}x^{n-3}y^{3}+\cdots+\binom{n}{n}y^{n}
+\]
+όπου οι συντελεστές λέγονται \textbf{\color{blue} διωνυμικοί συντελεστές} και δίνονται από τη σχέση:
+\[
+\binom{n}{k}=\frac{n(n-1)(n-2)\cdots(n-k+1)}{k!}=\frac{n!}{k!(n-k)!}=\binom{n}{n-k}
+\]
+
+\subsection{Ιδίότητες Διωνυμικών Συντελεστών}
+
+\begin{enumerate}
+  \item Οι διωνυμικοί συντελεστές δίνονται και από το \textbf{\color{blue} τρίγωνο του \textlatin{Pascal}}, το οποίο έχεις τις εξής 2 ιδιότητες:
+  \begin{enumerate}[i)]
+    \item Ο πρώτος και ο τελευταίος αριθμός κάθε γραμμής είναι $1$.
+    \item\label{pasprop} Οποιοσδήποτε άλλος αριθμός σε κάθε γραμμή, είναι το άθροισμα των 2 αριθμών που βρίσκονται ακριβώς από πάνω του στην αμέσως προηγούμενη γραμμή.
+  \end{enumerate}
+  Η ιδιότητα~\ref{pasprop} αποτελεί την παρακάτω ιδιότητα των διωνυμικών συντελεστών:
+  \[
+  \binom{n}{k}+\binom{n}{k+1}=\binom{n+1}{k+1}
+  \]
+
+  \begin{gather*}
+    (a+b)^{0}={\color{blue}1} \\
+    (a+b)^{1}={\color{blue}1}a+b{\color{blue}1} \\
+    (a+b)^{2}={\color{blue}1}a^{2}+{\color{blue}2}ab+b^{2}{\color{blue}1} \\
+    (a+b)^{3}={\color{blue}1}a^{3}+{\color{blue}3}a^{2}b+{\color{blue}3}ab^{2}+b^{3}{\color{blue}1} \\
+    (a+b)^{4}={\color{blue}1}a^{4}+{\color{blue}4}a^{3}b+{\color{blue}6}a^{2}b^{2}+{\color{blue}4}ab^{3}+b^{4}{\color{blue}1} \\
+    (a+b)^{5}={\color{blue}1}a^{5}+{\color{blue}5}a^{4}b+{\color{blue}10}a^{3}b^{2}+{\color{blue}10}a^{2}b^{3}+{\color{blue}5}ab^{4}+b^{5}{\color{blue}1} \\
+    (a+b)^{6}={\color{blue}1}a^{6}+{\color{blue}6}a^{5}b+{\color{blue}15}a^{4}b^{2}+{\color{blue}20}a^{3}b^{3}+{\color{blue}15}a^{2}b^{4}+{\color{blue}6}ab^{5}+b^{6}{\color{blue}1} \\
+    \dotfill
+  \end{gather*}
+
+\item $\binom{n}{n}=1$
+\item $\binom{n}{1}=\binom{n}{n-1}=n$
+\item $\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+\cdots\binom{n}{n}=2^{n}$
+\item $\binom{n}{0}-\binom{n}{1}+\binom{n}{2}-\cdots (-1)^{n}\binom{n}{n}=0$
+\item $\binom{n}{n}+\binom{n+1}{n}+\binom{n+2}{n}+\cdots+\binom{n+m}{n}=\binom{n+m+1}{n+1}$
+\item $\binom{n}{0}+\binom{n}{2}+\binom{n}{4}+\cdots=2^{n-1}$
+\item $\binom{n}{1}+\binom{n}{3}+\binom{n}{5}+\cdots=2^{n-1}$
+\item $(\binom{n}{0})^{2}+(\binom{n}{1})^{2}+(\binom{n}{2})^{2}+\cdots+(\binom{n}{n})^{2}=\binom{2n}{n}$
+\item $\binom{m}{0}\binom{n}{p}+\binom{m}{1}\binom{n}{p-1}+\cdots+\binom{m}{p}\binom{n}{0}=\binom{m+n}{p}$
+\item $1\cdot\binom{n}{1}+2\cdot\binom{n}{2}+3\cdot\binom{n}{3}+\cdots+n\cdot\binom{n}{n}=n2^{n-1}$
+\item $1\cdot\binom{n}{1}-2\cdot\binom{n}{2}+3\cdot\binom{n}{3}-\cdots+(-1)^{n}n\cdot\binom{n}{n}=0$
+\end{enumerate}
+
+\section{Πολυωνυμικό Ανάπτυγμα}
+
+Αν $n_{1}, n_{2}, \ldots, n_{r}$ είναι μη-αρνητικοί ακέραιοι τέτοιοι ώστε $n_{1}+n_{2}+\cdots+n_{r}=n$, τότε η παράσταση
+\[
+\binom{n}{n_{1},n_{2},\ldots,n_{r}}=\frac{n!}{n_{1}! n_{2}! \cdots n_{r}!}
+\]
+λέγεται \textbf{\color{blue} πολυωνυμικός συντελεστής} και προκύπτει από τον τύπο του πολυωνυμικού αναπτύγματος
+\[
+(x_{1}+x_{2}+\cdots+x_{p})^{n}=\sum\binom{n}{n_{1},n_{2},\ldots,n_{r}}x_{1}^{n_{1}}x_{2}^{n_{2}}\cdots x_{r}^{n_{r}}
+\]
+όπου το άθροισμα υπολογίζεται πάνω σε όλους τους δυνατούς πολυωνυμικούς συντελεστές.
+

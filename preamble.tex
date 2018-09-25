@@ -1,0 +1,103 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage{etex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Babel language package
+\usepackage[english,greek]{babel}
+% Inputenc font encoding
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{extsizes}
+\usepackage{multicol}
+
+%%%%% math packages %%%%%%%%%%%%%%%%%%
+\usepackage[intlimits]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{proof}
+\usepackage{mathtools}
+
+\usepackage[italicdiff]{physics}
+\usepackage{siunitx}
+\usepackage{xfrac}
+
+%%%%%%% symbols packages %%%%%%%%%%%%%%
+\usepackage{bm} %for use \bm instead \boldsymbol in math mode
+\usepackage{dsfont}
+\usepackage{stmaryrd}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%% graphics %%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{color}
+%\usepackage{xypic}
+%\usepackage[all]{xy}
+%\usepackage{calc}
+
+%%%%%% tables %%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{minibox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+%%%%% header and footer rule %%%%%%%%%
+\setlength{\headheight}{14pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}
+\fancyhead{}
+\lfoot{}
+\rfoot{\small \thepage}}
+\fancypagestyle{vangelis}{\fancyhf{}
+\rhead{\small \leftmark}
+\lhead{\small }
+\lfoot{}
+\rfoot{\small \thepage}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{hyperref}
+\usepackage{url}
+%%%%%%% hyperref settings %%%%%%%%%%%%
+\hypersetup{pdfpagemode=UseOutlines,hidelinks,
+bookmarksopen=true,
+pdfdisplaydoctitle=true,
+pdfstartview=Fit,
+unicode=true,
+pdfpagelayout=OneColumn,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[space]{grffile}
+
+\usepackage{geometry}
+\geometry{left=25.63mm,right=25.63mm,top=36.25mm,bottom=36.25mm,footskip=24.16mm,headsep=24.16mm}
+
+%\usepackage[explicit]{titlesec}
+%%%%%% titlesec settings %%%%%%%%%%%%%
+%\titleformat{\chapter}[block]{\LARGE\sc\bfseries}{\thechapter.}{1ex}{#1}
+%\titlespacing*{\chapter}{0cm}{0cm}{36pt}[0ex]
+%\titleformat{\section}[block]{\Large\bfseries}{\thesection.}{1ex}{#1}
+%\titlespacing*{\section}{0cm}{34.56pt}{17.28pt}[0ex]
+%\titleformat{\subsection}[block]{\large\bfseries{\thesubsection.}{1ex}{#1}
+%\titlespacing*{\subsection}{0pt}{28.80pt}{14.40pt}[0ex]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% My Theorems %%%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Θεώρημα}[section]
+\newtheorem{cor}[thm]{Πόρισμα}
+\newtheorem{lem}[thm]{λήμμα}
+\theoremstyle{definition}
+\newtheorem{dfn}{Ορισμός}[section]
+\newtheorem{dfns}[dfn]{Ορισμοί}
+\newtheorem{ex}[thm]{Παραδειγμα}
+\theoremstyle{remark}
+\newtheorem{remark}{Παρατήρηση}[section]
+\newtheorem{remarks}[remark]{Παρατηρήσεις}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,79 @@
+
+
+\section{Κατανομές Πιθανότητας}
+
+
+
+\begin{minipage}[t]{.48\textwidth}
+  \subsection*{Διακριτή Τυχαία Μεταβλητή}
+
+  Η \textbf{συνάρτηση πιθανότητας} $P(X=x)$ μιας διακριτής τυχαίας μεταβλητής
+  $X$ ικανοποιεί τις συνθήκες:
+  \begin{enumerate}[i)]
+    \item $P(X=x) \geq 0$, $\forall x$ στο Πεδίο Ορισμού
+    \item $\sum_{x}P(X=x)=1$
+  \end{enumerate}
+  Η \textbf{αθροιστική συνάρτηση κατανομής} $F(a)$ μιας διακριτής τυχαίας
+  μεταβλητής $X$ υπολογίζεται με βάση τη σχέση:
+  \begin{equation*}
+    F(a)=P(X\leq a)=\sum_{x\leq a}(P(X=x)), \forall a\in\mathbb{R}
+  \end{equation*}
+  Η \textbf{μέση (αναμενόμενη) τιμή} $\mu=E(X)$ μιας διακριτής τυχαίας
+  μεταβλητής $X$ υπολογίζεται με βάση τον τύπο:
+  \begin{equation*}
+    E(X)=\sum_{x}xP(X=x)< +\infty
+  \end{equation*}
+  Αν $X$ διακριτή τυχαία μεταβλητή και $g(\cdot)$ μια πραγματική συνάρτηση, τότε
+  η μέση τιμή της τυχαίας μεταβλητής $g(X)$ δίνεται από τη σχέση:
+  \begin{equation*}
+    E[g(X)]=\sum_{x}g(x)P(X=x)<+\infty
+  \end{equation*}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.48\textwidth}
+  \subsection*{Συνεχής Τυχαία Μεταβλητή}
+
+  Η \textbf{συνάρτηση πυκνότητας πιθανότητας} $f(x)$ μιας συνεχούς τυχαίας μεταβλητής $X$ ικανοποιεί τις συνθήκες:
+  \begin{enumerate}[i)]
+    \item $f(x)\geq 0, -\infty<x<+\infty$
+    \item $\int_{-\infty}^{+\infty}f(x)\,dx=1$
+  \end{enumerate}
+  Η \textbf{αθροιστική συνάρτηση κατανομής} $F(a)$ μιας συνεχούς τυχαίας
+  μεταβλητής $X$ υπολογίζεται με βάση τη σχέση:
+  \begin{equation*}
+    F(a)=P(X\leq a)=\int_{-\infty}^{+\infty}f(t)\,dt, \forall a\in \mathbb{R}
+  \end{equation*}
+  Η \textbf{μέση (αναμενόμενη) τιμή} $E(X)$ μιας συνεχούς τυχαίας
+  μεταβλητής $X$ υπολογίζεται με βάση τον τύπο:
+  \begin{equation*}
+    E(X)=\int_{-\infty}^{+\infty}xf(x)\,dx<+\infty
+  \end{equation*}
+  Αν $X$ συνεχής τυχαία μεταβλητή και $g(\cdot)$ μια πραγματική συνάρτηση, τότε
+  η μέση τιμή της τυχαίας μεταβλητής $g(X)$ δίνεται από τη σχέση:
+  \begin{equation*}
+    E[g(X)]=\int_{-\infty}^{+\infty}g(x)f(x)\,dx<+\infty
+  \end{equation*}
+\end{minipage}
+
+\subsection*{Ιδιότητες της Μέσης Τιμής}
+
+\begin{enumerate}
+  \item $E[ag(X)+b]=aE[g(X)]+b$, όπου $a,b$ σταθερές.
+  \item $E[a_{1}g_{1}(x)+a_{2}g_{2}(x)]=a_{1}E[g_{1}(x)]+a_{2}E[g_{2}(x)]$,
+  όπου $a_{1}, a_{2}$ σταθερές.
+\end{enumerate}
+
+ \subsection*{Διακύμανση}
+
+Έστω $X$ τυχαία μεταβλητή (διακριτή ή συνεχής) με μέση τιμή $\mu=E(X)$. Η
+\textbf{διακύμανση} της $X$ συμβολίζεται με $V(X)$ η $\sigma^{2}$ και δίνεται
+από τη σχέση:
+\begin{equation*}
+  V(X)=\sigma^{2}E[X-E(X)]^{2}=E(X-\mu)^{2}=E(X^{2})-\mu^{2}
+\end{equation*}
+
+\subsubsection*{Ιδιότητα της Διακύμανσης}
+
+\begin{enumerate}
+  \item $V(aX+b)=a^{2}V(X)$, όπου $a,b$ σταθερές
+\end{enumerate}

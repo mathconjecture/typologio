@@ -1,0 +1,159 @@
+
+
+
+
+\subsection{Ορισμοί}
+
+\begin{tabular}{@{}>{\color{blue}}l<{}l@{}}
+   Υπερβολικό Ημίτονο: & $\sinh x = \frac{e^{x}-e^{-x}}{2}$ \\
+   Υπερβολικό Συνημίτονο: & $\cosh x = \frac{e^{x}+e^{-x}}{2}$ \\
+   Υπερβολική Εφαπτομένη: & $\tanh x = \frac{e^{x}+e^{-x}}{e^{x}+e^{-x}}$ \\
+   Υπερβολική Συνεφαπτομένη: & $\coth x = \frac{e^{x}+e^{-x}}{e^{x}-e^{-x}}$ \\
+   Υπερβολική Τέμνουσα: & $\sech x = \frac{2}{e^{x}+e^{-x}}$ \\
+   Υπερβολική Συντέμνουσα: & $\csch x = \frac{2}{e^{x}-e^{-x}}$ \\
+\end{tabular}
+
+\subsection{Ταυτότητες μεταξύ Υπερβολικών συναρτήσεων}
+
+\begin{align*}
+  \cosh^{2}x-\sinh^{2}x &=1 &  \sinh x + \cosh x &= \frac{1}{\cosh x - \sinh x} \\
+  \tanh x &= \frac{\sinh x}{\cosh x} & \coth x &= \frac{1}{\tanh x} = \frac{\cosh x}{\sinh x} \\
+  \sech x &= \frac{1}{\cosh x} & \csch x &= \frac{1}{\sinh x} \\
+  \coth^{2}x-\csch^{2}x&=1 & \sech^{2}x+\tanh^{2}x&=1 \\
+\end{align*}
+
+\begin{align*}
+  \sinh(-x) &= -\sinh x \\
+  \cosh(-x) &= \cosh x \\
+  \tanh(-x) &= -\tanh x \\
+  \coth(-x) &= -\coth x \\
+  \sech(-x) &= \sech x \\
+  \csch(-x) &= -\csch x \\
+\end{align*}
+
+\begin{align*}
+  \sinh(x\pm y)&=\sinh x \cosh y \pm \cosh x \sinh y \\
+  \cosh(x\pm y)&=\cosh x \cosh y \pm \sinh x \sinh y \\
+  \tanh(x\pm y)&=\frac{\tanh x\pm \tanh y}{1\pm \tanh x\tanh y} \\
+  \coth(x\pm y)&=\frac{\coth x\coth y \pm 1}{\coth y \pm \coth x}
+\end{align*}
+
+\begin{align*}
+  \sinh 2x &= 2\sinh x\cosh x \\
+  \cosh 2x &= \cosh^{2}x+\sinh^{2}x \\
+           &= 2\cosh^{2}x -1 \\
+           &= 1+2\sinh^{2}x \\
+  \tanh 2x &= \frac{2\tanh x}{1+\tanh^{2}x}
+\end{align*}
+
+\begin{align*}
+  \sinh \frac{x}{2} &= \sqrt{\frac{\cosh x -1}{2}},\quad x>0 & \sinh \frac{x}{2} &= -\sqrt{\frac{\cosh x -1}{2}},\quad x<0 \\
+  \cosh \frac{x}{2} &= \sqrt{\frac{\cosh x+1}{2}} \\
+  \tanh \frac{x}{2} &= \sqrt{\frac{\cosh x - 1 }{\cosh x + 1}},\quad x>0 & \tanh \frac{x}{2} &= -\sqrt{\frac{\cosh x - 1 }{\cosh x + 1}},\quad x<0 \\
+  &=\frac{\sinh x}{\cosh x+1} \\
+  &=\frac{\cosh x -1}{\sinh x}
+\end{align*}
+
+
+\begin{align*}
+  \sinh 3x &= 3\sinh x + 4\sinh^{3}x \\
+  \cosh 3x &= 4\cosh^{3}x-3\cosh x \\
+  \tanh 3x &= \frac{3\tanh x + \tanh^{3}x}{1+3\tanh^{2}x} \\
+  \sinh 4x &= 8\sinh^{3}x\cosh x + 4\sinh x \cosh x \\
+  \cosh 4x &= 8\cosh^{4}x-8\cosh^{2}x+1 \\
+  \tanh 4x &= \frac{4\tanh x + 4\tanh^{3}x}{1+6\tanh^{2}x+\tanh^{4}x}
+\end{align*}
+
+
+\begin{align*}
+  \sinh^{2}x &=\frac{1}{2}\cosh 2x -\frac{1}{2} \\
+  \cosh^{2}x &=\frac{1}{2}\cosh 2x +\frac{1}{2} \\
+  \sinh^{3}x &=\frac{1}{4}\sinh 3x -\frac{3}{4}\sinh x \\
+  \cosh^{3}x &=\frac{1}{4}\cosh 3x +\frac{3}{4}\cosh x \\
+  \sinh^{4}x &=\frac{3}{8}-\frac{1}{2}\cosh 2x + \frac{1}{8}\cosh 4x \\
+  \cosh^{4}x &=\frac{3}{8}+\frac{1}{2}\cosh 2x + \frac{1}{8}\cosh 4x
+\end{align*}
+
+\begin{align*}
+  \sinh x + \sinh y &= 2\sinh \frac{1}{2}(x+y)\cosh \frac{1}{2}(x-y) \\
+  \sinh x - \sinh y &= 2\cosh \frac{1}{2}(x+y)\sinh \frac{1}{2}(x-y) \\
+  \cosh x + \cosh y &= 2\cosh \frac{1}{2}(x+y)\cosh \frac{1}{2}(x-y) \\
+  \cosh x - \cosh y &= 2\sinh \frac{1}{2}(x+y)\sinh \frac{1}{2}(x-y) \\
+  \sinh x\sinh y &= \frac{1}{2}\left\{\cosh(x+y)-\cosh(x-y)\right\} \\
+  \cosh x\cosh y &= \frac{1}{2}\left\{\cosh(x+y)+\cosh(x-y)\right\} \\
+  \sinh x\cosh y &= \frac{1}{2}\left\{\sinh(x+y)+\sinh(x-y)\right\}
+\end{align*}
+
+Αν θεωρήσουμε $x>0$ τότε ισχύουν οι παρακάτω σχέσεις μεταξύ των υπερβολικών τριγωνομετρικών συναρτήσεων
+
+\begin{tabular}{*{7}{>{$}c<{$}}}
+  & \sinh x=u & \cosh x=u & \tanh x=u & \coth x=u & \sech x=u & \csch x=u \\
+  \sinh x & u & \sqrt{u^{2}-1} & \sfrac{u}{\sqrt{1-u^{2}}} & \sfrac{1}{\sqrt{u^{2}-1}} & \sfrac{\sqrt{1}-u^{2}}{u} & \sfrac{1}{u} \\
+  \cosh x & \sqrt{1+u^{2}} & u & \sfrac{1}{\sqrt{1-u^{2}}} & \sfrac{u}{\sqrt{u^{2}-1}} & \sfrac{1}{u} & \sfrac{\sqrt{1+u^{2}}}{u} \\
+  \tanh x & \sfrac{u}{\sqrt{1+u^{2}}} & \sfrac{\sqrt{u^{2}-1}}{u} & u & \sfrac{1}{u} & \sqrt{1-u^{2}} & \sfrac{1}{\sqrt{1+u^{2}}} \\
+  \coth x & \sfrac{\sqrt{u^{2}+1}}{u} & \sfrac{u}{\sqrt{u^{2}-1}} & \sfrac{1}{u} & u & \sfrac{1}{\sqrt{1-u^{2}}} & \sqrt{1+u^{2}} \\
+  \sech x & \sfrac{1}{\sqrt{1+u^{2}}} & \sfrac{1}{u} & \sqrt{1-u^{2}} & \sfrac{\sqrt{u^{2}-1}}{u} & u & \sfrac{u}{\sqrt{1+u^{2}}} \\
+  \csch x & \sfrac{1}{u} & \sfrac{1}{\sqrt{u^{2}-1}} & \sfrac{\sqrt{1-u^{2}}}{u} & \sqrt{u^{2}-1} & \sfrac{u}{\sqrt{1-u^{2}}} & u
+\end{tabular}
+
+\subsection{Γραφικές παραστάσεις}
+
+\subsection{Αντίστροφες Υπερβολικές Συναρτήσεις}
+
+\begin{tabular}{@{}*{2}{>{$}l<{$}}@{}}
+  \sinh^{-1}x = \ln(x+\sqrt{x^{2}+1}) & -\infty<x<+\infty \\
+  \cosh^{-1}x = \ln(x+\sqrt{x^{2}-1}) & x\geq 1 \\
+  \tanh^{-1}x = \frac{1}{2}\ln(\frac{1+x}{1-x}) & -1<x<1 \\
+  \coth^{-1}x = \frac{1}{2}\ln(\frac{x+1}{x-1}) & x>1 \qq{ή} x<-1 \\
+  \sech^{-1}x = \ln(\frac{1}{x}+\sqrt{\frac{1}{x^{2}}-1}) & 0<x\leq 1 \\
+  \csch^{-1}x = \ln(\frac{1}{x}+\sqrt{\frac{1}{x^{2}}+1}) & x\neq 0
+\end{tabular}
+
+\subsection{Σχέσεις μεταξύ Υπερβολικών Συναρτήσεων}
+
+\begin{tabular}{>{$}l<{$}}
+  \csch^{-1}x = \sinh[-1](\frac{1}{x}) \\
+  \sech^{-1}x = \cosh[-1](\frac{1}{x}) \\
+  \coth^{-1}x = \tanh[-1](\frac{1}{x}) \\
+  \sinh[-1](-x) = -\sinh^{-1}x \\
+  \tanh[-1](-x) = -\tanh^{-1}x \\
+  \coth[-1](-x) = -\coth^{-1}x \\
+  \csch[-1](-x) = -\csch^{-1}x
+\end{tabular}
+
+
+\subsection{Γραφικές Παραστάσεις Αντίστροφων Υπερβολικών Συναρτήσεων}
+
+\subsection{Σχέσεις μεταξύ Υπερβολικών Τριγωνομετρικών και Τριγωνομετρικών Συναρτήσεων}
+
+\begin{tabular}{@{}*{2}{>{$}l<{$}}@{}}
+  \sin(ix) = i\sinh x & \sinh(ix) = i\sin x \\
+  \cos(ix) = \cosh x & \cosh(ix) = \cos x \\
+  \tan(ix) = i\tanh x & \tanh(ix) = i\tan x \\
+  \cot(ix) = -i\coth x & \coth(ix) = -i\cot x \\
+  \sec(ix) = \sech x & \sech(ix) = \sec x \\
+  \csc(ix) = -i\csch x & \csch(ix) = -i\csc x \\
+\end{tabular}
+
+
+\subsection{Περιοδικότητα Υπερβολικών Συναρτήσεων}
+
+\begin{tabular}{>{$}l<{$}}
+  \sinh(x+2k\pi i) = \sinh x \\
+  \cosh(x+2k\pi i) = \cosh x \\
+  \tanh(x+2k\pi i) = \tanh x \\
+  \coth(x+2k\pi i) = \coth x \\
+  \sech(x+2k\pi i) = \sech x \\
+  \csch(x+2k\pi i) = \csch x
+\end{tabular}
+
+\subsection{Σχέσεις μεταξύ αντίστροφων υπερβολικών και αντίστροφων τριγωνομετρικών συναρτήσεων}
+
+\begin{tabular}{@{}*{2}{>{$}l<{$}}@{}}
+\sin[-1](ix) = i\sin^{-1}x & \sinh[-1](ix) = i\sin^{-1}x \\
+\cos^{-1}x = \pm i\cosh^{-1}x & \cosh^{-1}x = \pm i\cos^{-1}x \\
+\tan[-1](ix) = i\tanh^{-1}x & \tanh[-1](ix) = i\tan^{-1}x \\
+\cot[-1](ix) = i\coth^{-1}x & \coth[-1](ix) = -i\cot^{-1}x \\
+\sec^{-1}x = \pm i\sech^{-1}x & \sech^{-1}x = \pm i\sec^{-1}x \\
+\csc[-1](ix) = -i\csch^{-1}x & \csch[-1](ix) = -i\csc^{-1}x
+\end{tabular}
