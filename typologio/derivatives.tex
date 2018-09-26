@@ -78,7 +78,7 @@
     \dv{x}(cf) = c\dv{f}{x} \\
     \dv{x}(f\pm g) = \dv{f}{x} \pm \dv{g}{x} \\
     \dv{x}(f g) = f \dv{g}{x} + g \dv{f}{x} \\
-    \dv{x}(\frac{f}{g}) = \frac{f\dv{g}{x}-g\dv{f}{x}}{g^{2}} \\
+    \dv{x}(\frac{f}{g}) = \frac{f\dv*{g}{x}-g\dv*{f}{x}}{g^{2}} \\
     \dv{x}(fgh) = fg\dv{h}{x} + fh\dv{g}{x} + gh\dv{f}{x} \\
 \end{tabular}
 
@@ -111,3 +111,75 @@
   Τρίτη Παράγωγος & \dv{x}(\dv[2]{y}{x}) = \dv[3]{y}{x} = f'''(x) = y''' \\
   Παράγωγος τάξης $n$ & \dv{x}(\dv[n-1]{y}{x}) = \dv[n]{y}{x} = f^{(n)}(x) = y^{(n)}
 \end{tabular}
+
+\subsection{Τύπος \textlatin{Leibniz}}
+
+Έστω $f$, $g$ συναρτήσεις. Τότε
+\begin{align*}
+\dv[n]{f}{x} &= f\dv[n]{x}(g)+\binom{n}{1}\dv{x}(f)\dv[n-1]{x}(g)+\binom{n}{2}\dv[2]{x}(f)\dv[n-2]{x}(g)+\cdots+g\dv[n]{g}(f) \\ &= \sum_{k=0}^{n}\binom{n}{k}f^{(n-k)}g^{(k)}
+\end{align*}
+όπου $\binom{n}{1}$, $\binom{n}{2}$, $\ldots$ είναι οι δυωνυμικοί συντελεστές.
+
+Ειδικές Περιπτώσεις:
+\begin{itemize}
+  \item $\dv[2]{x}(fg) = f\dv[2]{g}{x} + 2\dv{f}{x}\dv{g}{x} + g\dv[2]{f}{g}$
+  \item $\dv[3]{x}(fg) = f\dv[3]{g}{x} + 3\dv{f}{x}\dv[2]{g}{x} + 3dv[2]{f}{x}\dv{g}{x} + g\dv[3]{f}{x}$
+\end{itemize}
+
+
+\subsection{Διαφορικό}
+
+Έστω $y=f(x)$ και $\Delta y = f(x+\Delta x) - f(x)$. Τότε
+\[
+  \frac{\Delta y}{\Delta x} = \frac{f(x+\Delta x) - f(x)}{\Delta x} = f'(x)+\epsilon = \dv{y}{x} + \epsilon
+\]
+όπου $epsilon \to 0$ καθώς $\Delta x \to 0$. Άρα
+\[
+  \Delta y = f'(x)\Delta x + \epsilon \Delta x
+\]
+Αν θέσουμε $\Delta x = \dd{x}$ το διαφορικό του $x$, τότε ορίζουμε το διαφορικό του $y$ να είναι
+\[
+\dd{y} = f'(x)\dd{x}
+\]
+
+\subsection{Ιδιότητες Διαφορικών}
+
+Οι ιδιότητες των διαφορικών είναι εντελώς ανάλογες με αυτές των παραγώγων.
+\begin{itemize}
+  \item $\dd{(f\pm g \pm h \pm \cdots)} = \dd{f} \pm \dd{g} \pm \pm \dd{h} \pm \cdots$
+  \item $\dd{(fg)} = f\dd{g}+g\dd{f}$
+  \item $\dd{(\frac{f}{g})} = \frac{g\dd{f}-f\dd{g}}{g^{2}}$
+  \item $\dd{(f^{n})} = nf^{n-1}\dd{f}$
+\end{itemize}
+
+
+\section{Μερικές Παράγωγοι}
+
+Έστω $z=f(x,y)$ μια συνάρτηση δύο μεταβλητών $x$ και $y$. Τότε ορίζουμε ως μερική παράγωγο της $z$ ή $f(x,y)$ ως προς $x$, θεωρώντας ότι η μεταβλητή $y$ είνα σταθερή,
+\[
+  \pdv{f}{x} = \lim_{\Delta x\to 0}\frac{f(x+\Delta x, y) - f(x,y)}{\Delta x}
+\]
+Αυτή η παράγωγος συμβολίζεται επίσης και με $\pdv*{z}{x}$, $f_{x}$ και $z_{x}$.
+
+Ομοίως η μερική παράγωγος της $z$ ή $f(x,y)$ ως προς $y$, θεωρώντας ότι η μεταβλητή $x$ είνα σταθερή, ορίζεται ως
+\[
+\pdv{f}{y} = \lim_{\Delta y\to 0}\frac{f(x, y+\Delta y) - f(x,y)}{\Delta y}
+\]
+Αυτή η παράγωγος συμβολίζεται επίσης και με $\pdv*{z}{y}$, $f_{y}$ και $z_{y}$.
+
+Οι μερικές παράγωγοι ανώτερης τάξης ορίζονται ως εξής:
+
+\begin{itemize}
+  \item $\pdv[2]{f}{x}=\pdv{x}(\pdv{f}{x})$
+  \item $\pdv[2]{f}{y}=\pdv{y}(\pdv{f}{y})$
+  \item $\pdv[2]{f}{x}{y}=\pdv{x}(\pdv{f}{y})$
+  \item $\pdv[2]{f}{y}{x}=\pdv{y}(\pdv{f}{x})$
+\end{itemize}
+
+\subsection{Διαφορικά Συναρτήσεων Πολλών Μεταβλητών}
+
+Το διαφορικό της συνάρτησης $z=f(x,y)$ ορίζεται ως
+\[
+  \dd{z}=\dd{f}=\pdv{f}{x}\dd{x}+\pdv{f}{y}\dd{y}
+\]
+όπου $\dd{x}=\Delta x$ και $\dd{y}=\Delta y$. Το διαφορικό $\dd{f}$ είναι συνάρτηση τεσσαρων μεταβλητών, των $x$, $y$, $\Delta x$ και $\Delta y$.
