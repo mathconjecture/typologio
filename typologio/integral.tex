@@ -1,0 +1,59 @@
+\input{../preamble.tex}
+\input{../definitions.tex}
+
+
+
+
+\begin{document}
+
+\section{Ολοκληρώματα}
+
+\subsection{Ορισμός Αόριστου Ολοκληρώματος}
+
+\[
+  \int f(x)\, dx = F(x) + c \Leftrightarrow F'(x) = f(x)
+\]
+
+\subsection{Ολοκληρώματα Βασικών Συναρτήσεων}
+
+\begin{tabular}{@{}*{2}{>{$}l<{$}}@{}}
+  \int 0 \,dx = c \\
+  \int 1 \,dx = \int \,dx = x  \\
+  \int x^{n} \,dx = \frac{x^{n+1}}{n+1}, \qq{$n\neq -1$} \\
+  \int \frac{1}{x} \,dx = \ln\abs{x}  \\
+  \int a^{x} \,dx = \frac{a^{x}}{\ln a}, \qq{$a>0$, $a\neq 1$} \\
+  \int e^{x} \,dx = e^{x}  \\
+  \int \sqrt[n]{x^{m}} \,dx =  \int x^{\frac{m}{n}} \,dx = \frac{x^{\frac{m}{n}+1}}{\frac{m}{n}+1} \\
+  \int \sin x \,dx = -\cos x & \int \sinh x \,dx = \cosh x \\
+  \int \cos x \,dx = \sin x & \int \cosh x \,dx = \sinh x \\
+  \int \tan x \,dx = \ln\sec x = -\ln\cos x & \int \tanh x \,dx = \ln\cosh x \\
+  \int \cot x \,dx = \ln\sin x & \int \coth x \,dx = \ln\sinh x \\
+  \int \sec x \,dx = \ln(\sec x + \tan x) = \ln\tan(\frac{x}{2}+\frac{\pi}{4}) & \int \sech x \,dx = \sin^{-1}(\tanh x) \\
+  \int \csc x \,dx = \ln(\csc x - \cot x) = \ln\tan\frac{x}{2} & \int \csch x \,dx = \ln\tanh\frac{x}{2} \\
+  \int \sec^{2}x \,dx = \tan x & \int \sech^{2}x \,dx = \tanh x \\
+  \int \csc^{2}x \,dx = -\cot x & \int \csch^{2}x \,dx = -\coth x \\
+  \int \tan^{2}x \,dx = \tan x - x  & \int \tanh^{2}x \,dx = x - \tanh x \\
+  \int \cot^{2}x \,dx = -\cot x - x & \int \coth^{2}x \,dx = x - \coth x \\
+  \int \sin^{2}x \,dx = \frac{x}{2} - \frac{\sin 2x}{4} & \int \sinh^{2}x \,dx = \frac{\sinh 2x}{4}-\frac{x}{2} \\
+  \int \cos^{2}x \,dx = \frac{x}{2} + \frac{\sin 2x}{4} & \int \cosh^{2}x \,dx = \frac{\sinh 2x}{4}+\frac{x}{2} \\
+  \int \sec x \tan x \,dx = \sec x & \int \sech x \tanh x \,dx = -\sech x \\
+  \int \csc x \cot x \,dx = -\csc x & \int \csch x \coth x \,dx = -\csch x
+\end{tabular}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int \frac{dx}{x^{2}+a^{2}} \,dx  = \frac{1}{a}\tan^{-1}{x} \\
+  \int \frac{dx}{x^{2}-a^{2}} \,dx  = -\frac{1}{a}\cot^{-1}{x}, \qq{$x^{2}>a^{2}$} \\
+  \int \frac{dx}{a^{2}-x^{2}} \,dx  = -\frac{1}{a}\tanh^{-1}{x}, \qq{$x^{2}<a^{2}$} \\
+  \int \frac{dx}{\sqrt{a^{2}-x^{2}}} \,dx  = \sin^{-1}x \\
+  \int \frac{dx}{\sqrt{x^{2}+a^{2}}} \,dx  = \ln(x+\sqrt{x^{2}+a^{2}}) \qq{ή} \sin^{-1}x \\
+  \int \frac{dx}{\sqrt{x^{2}-a^{2}}} \,dx  = \ln(x+\sqrt{x^{2}-a^{2}}) \\
+  \int \frac{dx}{x\sqrt{x^{2}-a^{2}}} \,dx = \frac{1}{a}\sec^{-1}\abs{\frac{x}{a}} \\
+  \int \frac{dx}{x\sqrt{x^{2}+a^{2}}} \,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{x^{2}+a^{2}}}{x}) \\
+  \int \frac{dx}{x\sqrt{a^{2}-x^{2}}} \,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{a^{2}-x^{2}}}{x})
+\end{tabular}
+
+
+
+
+
+\end{document}
