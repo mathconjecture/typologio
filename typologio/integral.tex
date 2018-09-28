@@ -1,3 +1,14 @@
+\input{../preamble.tex}
+\input{../definitions.tex}
+
+\usepackage{xspace}
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+
+
 \section{Ολοκληρώματα}
 
 \subsection{Ορισμός Αόριστου Ολοκληρώματος}
@@ -43,3 +54,95 @@
   \int \frac{dx}{x\sqrt{x^{2}+a^{2}}} \,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{x^{2}+a^{2}}}{x}) \\
   \int \frac{dx}{x\sqrt{a^{2}-x^{2}}} \,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{a^{2}-x^{2}}}{x})
 \end{tabular}
+
+\subsection{$ax+b$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int \frac{dx}{ax+b} \,dx = \frac{1}{a}\ln(ax+b) \\
+  \int \frac{x}{ax+b} \,dx = \frac{x}{a} - \frac{b}{a^{2}}\ln(ax+b) \\
+  \int \frac{dx}{x(ax+b)} \,dx = \frac{1}{b}\ln(\frac{x}{ax+b}) \\
+  \int \frac{1}{(ax+b)^{2}}\, dx = \frac{-1}{a(ax+b)} \\
+  \int \frac{x}{(ax+b)^{2}}\, dx = \frac{b}{a^{2}(ax+b)}+\frac{1}{a^{2}}\ln(ax+b) \\
+  \int \frac{1}{x(ax+b)^{2}} \,dx = \frac{1}{b^{2}}\ln(\frac{x}{ax+b}) \\
+  \int (ax+b)^{n} \,dx = \frac{(ax+b)^{n+1}}{a(n+1)}, n\neq -1 \\
+  \int x(ax+b)^{n} \,dx = \frac{(ax+b)^{n+2}}{a^{2}(n+2)} - \frac{b(ax+b)^{n+1}}{a^{2}(n+1)}, n\neq -1, -2 \\
+  \int {x^{m}}(ax+b)^{n} \,dx = \begin{cases}
+  \frac{x^{m+1}(ax+b)^{n}}{m+n+1} + \frac{nb}{m+n+1}\int x^{m}(ax+b)^{n-1}\,dx \\
+  \frac{x^{m}(ax+b)^{n+1}}{a(m+n+1)} - \frac{mb}{a(m+n+1)}\int x^{m-1}(ax+b)^n \,dx \\
+  \frac{-x^{m+1}(ax+b)^{n+1}}{b(n+1)} + \frac{m+n+2}{b(n+1)}\int x^{m}(ax+b)^{n+1}\,dx
+\end{cases}
+\end{tabular}
+
+\subsection{$\sqrt{ax+b}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int \frac{dx}{\sqrt{ax+b}} \,dx = \frac{2\sqrt{ax+b}}{a} \\
+  \int \frac{xdx}{\sqrt{ax+b}} \,dx = \frac{2(ax-2b)}{3a^{2}}\sqrt{ax+b} \\
+  \int \frac{dx}{x\sqrt{ax+b}} \,dx =
+    \begin{cases}
+      \frac{1}{\sqrt{b}}\ln(\frac{\sqrt{ax+b}-\sqrt{b}}{\sqrt{ax+b}+\sqrt{b}}) \\
+      \frac{2}{\sqrt{-b}}\tan^{-1}\sqrt{\frac{ax+b}{-b}}
+    \end{cases} \\
+  \int \sqrt{ax+b} \,dx = \frac{2\sqrt{(ax+b)^{3}}}{3a} \\
+  \int x\sqrt{ax+b} \,dx = \frac{2(3ax-2b)}{15a^{2}}\sqrt{(ax+b)^{3}} \\
+  \int \frac{\sqrt{ax+b}}{x} \,dx = 2\sqrt{ax+b} +b\int\frac{dx}{x\sqrt{ax+b}} \\
+  \int\frac{x^{m}}{\sqrt{ax+b}} \,dx = \frac{2x^{m}\sqrt{ax+b}}{a(2m+1)} - \frac{2mb}{a(2m+1)}\int \frac{x^{m-1}}{\sqrt{ax+b}} \,dx \\
+  \int \frac{dx}{x^{m}\sqrt{ax+b}} \,dx = -\frac{\sqrt{ax+b}}{b(m-1)x^{m-1}}-\frac{a(2m-3)}{b(2m-2)}  \int \frac{dx}{x^{m-1}\sqrt{ax+b}} \\
+  \int x^{m}\sqrt{ax+b} \,dx = \frac{2x^{m}}{a(2m+3)}(ax+b)^{frac{3}{2}}-\frac{2mb}{a(2m+3)}\int x^{m-1}\sqrt{ax+b} \,dx \\
+  \int \frac{\sqrt{ax+b}}{x^{m}} \,dx = -\frac{\sqrt{ax+b}}{(m-1)x^{m-1}} + \frac{a}{2(m-1)}\int \frac{dx}{x^{m-1}\sqrt{ax+b}}\, dx \\
+  \int \frac{\sqrt{ax+b}}{x^{m}} \,dx = -\frac{(ax+b)^{\frac{3}{2}}}{b(m-1)x^{m-1}} - \frac{a(2m-5)}{b(2m-2)}\int \frac{\sqrt{ax+b}}{x^{m-1}} \,dx \\
+  \int (ax+b)^{\frac{3}{2}} \,dx = \frac{2(ax+b)^{\frac{(m+2)}{2}}}{a^{2}(m+2)} \,dx \\\
+  \int x(ax+b)^{\frac{m}{2}} \,dx = \frac{2(ax+b)^{\frac{m+4}{2}}}{a^{2}(m+4)} - \frac{2b(ax+b)^{\frac{m+2}{2}}}{a^{2}(m+2)} \\
+  \int \frac{(ax+b)^{\frac{m}{2}}}{x} \,dx = \frac{2(ax+b)^{\frac{m}{2}}}{m}+b\int \frac{(ax+b)^{\frac{m-2}{2}}}{x} \,dx \\
+  \int \frac{dx}{x(ax+b)^{\frac{m}{2}}} \,dx = \frac{2}{b(m-2)(ax+b)^{\frac{m-2}{2}}} + \frac{1}{b}\int \frac{dx}{x(ax+b)^{\frac{m-2}{2}}} \,dx
+\end{tabular}
+
+\subsection{$(ax+b), (px+q)$}
+
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int \frac{dx}{(ax+b)(px+q)} = \frac{1}{bp-aq}\ln(\frac{px+q}{ax+b}) \\
+  \int \frac{x}{(ax+b)(px+q)} \,dx = \frac{1}{bp-aq}\{\frac{b}{a}\ln(ax+b)-\frac{q}{p}\ln(px+q)\} \\
+  \int \frac{1}{(ax+b)^{2}(px+q)} \,dx = \frac{1}{bp-aq}\{\frac{1}{ax+b}+\frac{p}{bp-aq}\ln(\frac{px+q}{ax+b})\} \\
+  \int \frac{x}{(ax+b)^{2}(px+q)} \,dx = \frac{1}{bp-aq}\{\frac{q}{bp-aq}\ln(\frac{ax+b}{px+q})-\frac{b}{a(ax+b)}\} \\
+  \int \frac{1}{(ax+b)^{m}(px+q)^{n}} \,dx = \frac{-1}{(n-1)(bp-aq)}\{\frac{1}{(ax+b)^{m-1}(px+q)^{n-1}}+a(m+n-2)\int \frac{(ax+b)^{m}}{(px+q)^{n-1}} \,dx\} \\
+  \int\frac{ax+b}{px+q} \,dx = \frac{ax}{p}+\frac{bp-aq}{p^{2}}\ln(px+q) \\
+  \int \frac{(ax+b)^{m}}{(px+q)^{n}} \,dx =
+    \begin{cases}
+      \frac{-1}{(n-1)(bp-aq)}\{\frac{(ax+b)^{m+1}}{(px+q)^{n-1}}+a(n-m-2)\int \frac{(ax+b)^{m}}{(px+q)^{n-1}}\,dx \} \\
+      \frac{-1}{p(n-m-1)}\{\frac{(ax+b)^{m}}{(px+q)^{n-1}}+m(bp-aq)\int\frac{(ax+b)^{m-1}}{(px+q)^{n}} \,dx \} \\
+      \frac{-1}{p(n-1)}\{\frac{(ax+b)^{m}}{(px+q)^{n-1}}-ma\int\frac{(ax+b)^{m-1}}{(px+q)^{n-1}}\, dx\}
+    \end{cases}
+\end{tabular}
+
+
+\subsection{$\sqrt{ax+b}, px+q$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{px+q}{\sqrt{ax+b}} \,dx = \frac{2(apx+3aq-2bp)}{3a^{2}}\sqrt{ax+b} \\
+  \int\frac{1}{(px+q)\sqrt{ax+b}} =
+  \begin{cases}
+    \frac{1}{\sqrt{bp-aq}\sqrt{p}}\ln(\frac{\sqrt{p(ax+b)}-\sqrt{bp-aq}}{\sqrt{p(ax+b)}+\sqrt{bp-aq}}) \\
+    \frac{2}{\sqrt{bp-aq}\sqrt{p}}\tan^{-1}\sqrt{\frac{p(ax+b)}{aq-bp}}
+  \end{cases} \\
+  \int\frac{\sqrt{ax+b}}{px+q} \,dx =
+  \begin{cases}
+     \frac{2\sqrt{ax+b}}{p}+\frac{\sqrt{bp-aq}}{p\sqrt{p}}\ln(\frac{\sqrt{p(ax+b)}-\sqrt{bp-aq}}{\sqrt{p(ax+b)}+\sqrt{bp-aq}}) \\
+     \frac{2\sqrt{ax+b}}{p}-\frac{2\sqrt{bp-aq}}{p\sqrt{p}}\tan^{-1}\sqrt{\frac{p(ax+b)}{aq-bp}}
+  \end{cases} \\
+  \int(px+q)^{n}\sqrt{ax+b} \,dx = \frac{2(px+q)^{n+1}\sqrt{ax+b}}{p(2n+3)}+\frac{bp-aq}{p(2n+3)}\int\frac{dx}{(px+q)\sqrt{ax+b}} \,dx \\
+  \int\frac{(px+q)^{n}}{\sqrt{ax+b}} \, dx = \frac{2(px+q)^{n}\sqrt{ax+b}}{a(2n+1)} + \frac{2n(aq-bp)}{a(2n+1)}\int\frac{(px+q)^{n-1}}{\sqrt{ax+b}} \,dx \\
+  \int\frac{\sqrt{ax+b}}{(px+q)^{n}} \,dx = \frac{-\sqrt{ax+b}}{p(n-1)(px+q)^{n-1}} + \frac{a}{2p(n-1)}\int \frac{1}{(px+q)^{n-1}\sqrt{ax+b}} \,dx
+\end{tabular}
+
+
+\subsection{$\sqrt{ax+b}, \sqrt{px+q}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+
+
+\end{tabular}
+
+
+
+\end{document}
