@@ -44,15 +44,15 @@
 \end{tabular}
 
 \begin{tabular}{@{}>{$}l<{$}@{}}
-  \int \frac{dx}{x^{2}+a^{2}} \,dx  = \frac{1}{a}\tan^{-1}{x} \\
-  \int \frac{dx}{x^{2}-a^{2}} \,dx  = -\frac{1}{a}\cot^{-1}{x}, \qq{$x^{2}>a^{2}$} \\
-  \int \frac{dx}{a^{2}-x^{2}} \,dx  = -\frac{1}{a}\tanh^{-1}{x}, \qq{$x^{2}<a^{2}$} \\
-  \int \frac{dx}{\sqrt{a^{2}-x^{2}}} \,dx  = \sin^{-1}x \\
-  \int \frac{dx}{\sqrt{x^{2}+a^{2}}} \,dx  = \ln(x+\sqrt{x^{2}+a^{2}}) \qq{ή} \sin^{-1}x \\
-  \int \frac{dx}{\sqrt{x^{2}-a^{2}}} \,dx  = \ln(x+\sqrt{x^{2}-a^{2}}) \\
-  \int \frac{dx}{x\sqrt{x^{2}-a^{2}}} \,dx = \frac{1}{a}\sec^{-1}\abs{\frac{x}{a}} \\
-  \int \frac{dx}{x\sqrt{x^{2}+a^{2}}} \,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{x^{2}+a^{2}}}{x}) \\
-  \int \frac{dx}{x\sqrt{a^{2}-x^{2}}} \,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{a^{2}-x^{2}}}{x})
+  \int \frac{1}{x^{2}+a^{2}} \,dx  = \frac{1}{a}\tan^{-1}\frac{x}{a} \\
+  \int \frac{1}{x^{2}-a^{2}} \,dx  = \frac{1}{2a}\ln(\frac{x-a}{x+a}) = -\frac{1}{a}\cot^{-1}\frac{x}{a} \\
+  \int \frac{1}{a^{2}-x^{2}} \,dx  = \frac{1}{2a}\ln(\frac{a+x}{a-x}) = \frac{1}{a}\tanh^{-1}\frac{x}{a}  \\
+  \int \frac{1}{\sqrt{a^{2}-x^{2}}} \,dx  = \sin^{-1}\frac{x}{a} \\
+  \int \frac{1}{\sqrt{x^{2}+a^{2}}} \,dx  = \ln(x+\sqrt{x^{2}+a^{2}}) = \sin^{-1}\frac{x}{a} \\
+  \int \frac{1}{\sqrt{x^{2}-a^{2}}} \,dx  = \ln(x+\sqrt{x^{2}-a^{2}}) \\
+  \int \frac{1}{x\sqrt{x^{2}-a^{2}}} \,dx = \frac{1}{a}\sec^{-1}\abs{\frac{x}{a}} \\
+  \int \frac{1}{x\sqrt{x^{2}+a^{2}}} \,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{x^{2}+a^{2}}}{x}) \\
+  \int \frac{1}{x\sqrt{a^{2}-x^{2}}} \,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{a^{2}-x^{2}}}{x})
 \end{tabular}
 
 \subsection{$ax+b$}
@@ -139,10 +139,64 @@
 \subsection{$\sqrt{ax+b}, \sqrt{px+q}$}
 
 \begin{tabular}{@{}>{$}l<{$}@{}}
-
-
+\int \frac{dx}{\sqrt{(ax+b)(px+q)}} \,dx =
+  \begin{cases}
+    \frac{2}{\sqrt{ap}}\ln(\sqrt{a(px+q)}+\sqrt{p(ax+b)}) \\
+    \frac{2}{\sqrt{-ap}}\tan^{-1}\sqrt{\frac{-p(ax+b)}{a(px+q)}}
+  \end{cases} \\
+  \int \frac{x}{\sqrt{(ax+b)(px+q)}} \,dx = \frac{\sqrt{(ax+b)(px+q)}}{ap} - \frac{bp+aq}{2ap}\int\frac{dx}{\sqrt{(ax+b)(px+q)}} \\
+  \int \sqrt{(ax+b)(px+q)} \,dx = \frac{2apx+bp+aq}{4ap}\sqrt{(ax+b)(px+q)}-\frac{(bp-aq)^{2}}{8ap}\int\frac{dx}{\sqrt{(ax+b)(px+q)}} \\
+  \int\sqrt{\frac{px+q}{ax+b}} \,dx = \frac{\sqrt{(ax+b)(px+q)}}{a}+\frac{aq-bp}{2a}\int\frac{dx}{\sqrt{(ax+b)(px+q)}} \\
+  \int\frac{dx}{(px+q)\sqrt{(ax+b)(px+q)}}=\frac{2\sqrt{ax+b}}{(aq-bp)\sqrt{px+q}}
 \end{tabular}
 
+\subsection{$x^{2}+a^{2}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{dx}{x^{2}+a^{2}} = \frac{1}{a}\tan^{-1}\frac{x}{a} \\
+  \int\frac{x}{x^{2}+a^{2}} \,dx = \frac{1}{2}\ln(x^{2}+a^{2}) \\
+  \int\frac{dx}{x(x^{2}+a^{2})} = \frac{1}{2a^{2}}\ln(\frac{x^{2}}{x^{2}+a^{2}}) \\
+  \int\frac{dx}{(x^{2}+a^{2})^{2}} = \frac{x}{2a^{2}(x^{2}+a^{2})}+\frac{1}{2a^{3}}\tan^{-1}\frac{x}{a} \\
+  \int\frac{x}{(x^{2}+a^{2})^{2}} \,dx = \frac{-1}{2(x^{2}+a^{2})^{2}} \\
+  \int\frac{1}{x(x^{2}+a^{2})^{2}} \,dx = \frac{1}{2a^{2}(x^{2}+a^{2})}+\frac{1}{2a^{4}}\ln(\frac{x^{2}}{x^{2}+a^{2}}) \\
+  \int\frac{1}{(x^{2}+a^{2})^{n}} = \frac{x}{2(n-1)a^{2}(x^{2}+a^{2})^{n-1}}+\frac{2n-3}{a^{2}(2n-2)}\int\frac{dx}{(x^{2}+a^{2})^{n-1}} \\
+  \int\frac{x}{(x^{2}+a^{2})^{n}} \,dx = \frac{-1}{2(n-1)(x^{2}+a^{2})^{n-1}} \\
+  \int\frac{dx}{x(x^{2}+a^{2})^{n}} \,dx = \frac{1}{2(n-1)a^{2}(x^{2}+a^{2})^{n-1}}+\frac{1}{a^{2}}\int\frac{dx}{x(x^{2}+a^{2})^{n-1}} \\
+  \int{x^{m}}{(x^{2}+a^{2})^{n}} = \int\frac{x^{m-2}}{(x^{2}+a^{2})^{n-1}} - a^{2}\int\frac{x^{m-2}}{(x^{2}+a^{2})^{n}} \\
+  \int\frac{1}{x^{m}(x^{2}+a^{2})^{n}} \,dx = \frac{1}{a^{2}}\int\frac{dx}{x^{m}(x^{2}+a^{2})^{n-1}} - \frac{1}{a^{2}}\int\frac{dx}{x^{m-2}(x^{2}+a^{2})^{n}}
+\end{tabular}
+
+\subsection{$x^{2}-a^{2}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{dx}{x^{2}-a^{2}} = \frac{1}{2a}\ln(\frac{x-a}{x+a}) = -\frac{1}{a}\coth^{-1}\frac{x}{a} \\
+  \int\frac{x}{x^{2}-a^{2}} = \frac{1}{2}\ln(x^{2}-a^{2}) \\
+  \int\frac{1}{x(x^{2}-a^{2})} \,dx = \frac{1}{2a^{2}}\ln(\frac{x^{2}-a^{2}}{x^{2}}) \\
+  \int\frac{dx}{(x^{2}-a^{2})^{2}} \,dx = \frac{-x}{2a^{2}(x^{2}-a^{2})}-\frac{1}{4a^{3}}\ln(\frac{x-a}{x+a}) \\
+  \int\frac{x}{(x^{2}-a^{2})^{2}} \,dx = \frac{-1}{2(x^{2}-a^{2})} \\
+  \int\frac{1}{x(x^{2}-a^{2})^{2}} \,dx = \frac{-1}{2a^{2}(x^{2}-a^{2})} + \frac{1}{2a^{4}}\ln(\frac{x^{2}}{x^{2}-a^{2}}) \\
+  \int\frac{dx}{(x^{2}-a^{2})^{n}} = \frac{-x}{2a^{2}(n-1)(x^{2}-a^{2})^{n-1}} - \frac{2n-3}{a^{2}(2n-2)}\int\frac{dx}{(x^{2}-a^{2})^{n-1}} \\
+  \int\frac{x}{(x^{2}-a^{2})^{n}} \,dx = \frac{-1}{2(n-1)(x^{2}-a^{2})^{n-1}} \\
+  \int\frac{1}{x(x^{2}-a^{2})^{n}} \,dx = \frac{-1}{2a^{2}(n-1)(x^{2}-a^{2})^{n-1}} - \frac{1}{a^{2}}\int\frac{dx}{x(x^{2}-a^{2})^{n-1}} \\
+  \int\frac{x^{m}}{(x^{2}-a^{2})^{n}} \,dx = \frac{x^{m-2}}{(x^{2}-a^{2})^{n-1}} \,dx + a^{2}\int\frac{x^{m-2}}{x(x^{2}-a^{2})^{n-1}} \\
+  \int\frac{dx}{x^{m}(x^{2}-a^{2})^{n}} = \frac{1}{a^{2}}\int\frac{dx}{x^{m-2}(x^{2}-a^{2})^{n}} - \frac{1}{a^{2}}\int\frac{dx}{x^{m}(x^{2}-a^{2})^{n-1}}
+\end{tabular}
+
+\subsection{$a^{2}-x^{2}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{dx}{a^{2}-x^{2}} = \frac{1}{2a}\ln(\frac{a+x}{a-x}) = \frac{1}{a}\tanh^{-1}\frac{x}{a} \\
+  \int\frac{x}{a^{2}-x^{2}} \,dx = -\frac{1}{2}\ln(a^{2}-x^{2}) \\
+  \int\frac{dx}{x(a^{2}-x^{2})} = \frac{1}{2a^{2}}\ln(\frac{x^{2}}{a^{2}-x^{2}}) \\
+  \int\frac{dx}{(a^{2}-x^{2})^{2}} = \frac{x}{2a^{2}(a^{2}-x^{2})} + \frac{1}{4a^{3}}\ln(\frac{a+x}{a-x}) \\
+  \int\frac{x}{(a^{2}-x^{2})^{2}} \,dx = \frac{1}{2(a^{2}-x^{2})} \\
+  \int\frac{1}{x(a^{2}-x^{2})^{2}} \,dx = \frac{1}{2a^{2}(a^{2}-x^{2})} + \frac{1}{2a^{4}}\ln(\frac{x^{2}}{a^{2}-x^{2}}) \\
+  \int\frac{dx}{(a^{2}-x^{2})^{n}} = \frac{x}{2a^{2}(n-1)(a^{2}-x^{2})^{n-1}}+\frac{2n-3}{a^{2}(2n-2)}\int\frac{dx}{(a^{2}-x^{2})^{n-1}} \\
+  \int\frac{x}{(a^{2}-x^{2})^{n}} \,dx = \frac{1}{2(n-1)(a^{2}-x^{2})^{n-1}} \\
+  \int\frac{dx}{x(a^{2}-x^{2})^{n}} = \frac{1}{2a^{2}(n-1)(a^{2}-x^{2})^{n-1}} + \frac{1}{a^{2}}\int\frac{dx}{x(a^{2}-x^{2})^{n-1}} \\
+  \int\frac{x^{m}}{(a^{2}-x^{2})^{n}} \,dx = a^{2}\int\frac{x^{m-2}}{(a^{2}-x^{2})^{n}}\,dx - \int\frac{x^{m-2}}{(a^{2}-x^{2})^{n-1}} \\
+  \int\frac{dx}{x^{m}(a^{2}-x^{2})^{n}} = \frac{1}{a^{2}}\int\frac{dx}{x^{m}(a^{2}-x^{2})^{n-1}} + \frac{1}{a^{2}}\int\frac{dx}{x^{m-2}(a^{2}-x^{2})^{n}}
+\end{tabular}
 
 
 \end{document}
