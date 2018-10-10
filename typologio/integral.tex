@@ -1,13 +1,3 @@
-\input{../preamble.tex}
-\input{../definitions.tex}
-
-\usepackage{xspace}
-\everymath{\displaystyle}
-
-
-\begin{document}
-
-
 
 \section{Ολοκληρώματα}
 
@@ -199,4 +189,91 @@
 \end{tabular}
 
 
-\end{document}
+
+
+\subsection{$\sqrt{x^{2}+a^{2}}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{1}{\sqrt{x^{2}+a^{2}}}\,dx = \ln(x+\sqrt{x^{2}+a^{2}}) = \sin^{-1}\frac{x}{a} \\
+  \int\frac{x}{\sqrt{x^{2}+a^{2}}}\,dx = \sqrt{x^{2}+a^{2}} \\
+  \int\frac{1}{x\sqrt{x^{2}+a^{2}}}\,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{x^{2}+a^{2}}}{x}) \\
+  \int\sqrt{x^{2}+a^{2}}\,dx = \frac{x\sqrt{x^{2}+a^{2}}}{2}+\frac{a^{2}}{2}\ln(x+\sqrt{x^{2}+a^{2}}) \\
+  \int x\sqrt{x^{2}+a^{2}}\,dx = \frac{(x^{2}+a^{2})^{\frac{3}{2}}}{3} \\
+  \int\frac{\sqrt{x^{2}+a^{2}}}{x}\,dx = \sqrt{x^{2}+a^{2}}-a\ln(\frac{a+\sqrt{x^{2}+a^{2}}}{x}) \\
+\end{tabular}
+
+
+\subsection{$\sqrt{x^{2}-a^{2}}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{1}{\sqrt{x^{2}-a^{2}}}\,dx = \ln(x+\sqrt{x^{2}-a^{2}}) \\
+  \int\frac{x}{\sqrt{x^{2}-a^{2}}}\,dx = \frac{x\sqrt{x^{2}-a^{2}}}{2}+\frac{a^{2}}{2}\ln(x+\sqrt{x^{2}-a^{2}}) \\
+  \int\frac{1}{x\sqrt{x^{2}-a^{2}}}\,dx = \frac{1}{a}\sec^{-1}\abs{\frac{x}{a}} \\
+  \int\sqrt{x^{2}-a^{2}}\,dx = \frac{x\sqrt{x^{2}-a^{2}}}{2} - \frac{a^{2}}{2}\ln(x+\sqrt{x^{2}-a^{2}}) \\
+  \int x\sqrt{x^{2}-a^{2}}\,dx = \frac{(x^{2}-a^{2})^{\frac{3}{2}}}{3} \\
+  \int\frac{\sqrt{x^{2}-a^{2}}}{x}\,dx = \sqrt{x^{2}-a^{2}} - a\sec^{-1}\abs{\frac{x}{a}} \\
+\end{tabular}
+
+
+\subsection{$\sqrt{a^{2}-x^{2}}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{1}{\sqrt{a^{2}-x^{2}}}\,dx = sin^{-1}{\frac{x}{a}} \\
+  \int{\frac{x}{\sqrt{a^{2}-x^{2}}}}\,dx = -\sqrt{a^{2}-x^{2}} \\
+  \int\frac{1}{x\sqrt{a^{2}-x^{2}}}\,dx = -\frac{1}{a}\ln(\frac{a+\sqrt{a^{2}-x^{2}}}{x}) \\
+  \int\sqrt{a^{2}-x^{2}}\,dx = \frac{x\sqrt{a^{2}-x^{2}}}{2}+\frac{a^{2}}{2}\sin^{-1}{\frac{x}{a}} \\
+  \int x\sqrt{a^{2}-x^{2}}\,dx = -\frac{x(a^{2}-x^{2})^{\frac{3}{2}}}{3} \\
+  \int\frac{\sqrt{a^{2}-x^{2}}}{x}\,dx = \sqrt{a^{2}-x^{2}}-a\ln(\frac{a+\sqrt{a^{2}-x^{2}}}{x}) \\
+\end{tabular}
+
+
+\subsection{$ax^{2}+bx+c$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{1}{ax^{2}+bx+c}\,dx =
+  \begin{cases}
+      \frac{2}{\sqrt{4ac-b^{2}}}\tan^{-1}\frac{2ax+b}{\sqrt{4ac-b^{2}}} \\
+      \frac{1}{\sqrt{b^{2}-4ac}}\ln(\frac{2ax+b-\sqrt{b^{2}-4ac}}{2ax+b+\sqrt{b^{2}-4ac}})
+  \end{cases} \\
+  \int\frac{x}{ax^{2}+bx+c}\,dx = \frac{1}{2a}\ln(ax^{2}+bx+c) - \frac{b}{2a}\int\frac{1}{ax^{2}+bx+c}\,dx \\
+  \int\frac{x^{m}}{ax^{2}+bx+c}\,dx = \frac{x^{m-1}}{a(m-1)}-\frac{c}{a}\int\frac{x^{m-2}}{ax^{2}+bx+c}\,dx -\frac{b}{a}\int\frac{x^{m-1}}{ax^{2}+bx+c}\,dx \\
+  \int\frac{1}{x(ax^{2}+bx+c)}\,dx = \frac{1}{2c}\ln(\frac{x^{2}}{ax^{2}+bx+c})-\frac{b}{2c}\int\frac{1}{ax^{2}+bx+c}\,dx \\
+  \int\frac{1}{x^{n}(ax^{2}+bx+c)}\,dx = -\frac{1}{c(n-1)x^{n-1}}-\frac{b}{c}\int\frac{1}{x^{n-1}(ax^{2}+bx+c)}\,dx -\frac{a}{c}\int{1}{x^{n-2}(ax^{2}+bx+c)}\,dx \\
+  \int\frac{x^{m}}{(ax^{2}+bx+c)^{n}}\,dx = -\frac{x^{m-1}}{a(2n-m-1)(ax^{2}+bx+c)^{n-1}}+\frac{c(m-1)}{a(2n-m-1)}\int\frac{x^{m-2}}{(ax^{2}+bx+c)^{n}} - \frac{b(n-m)}{a(2n-m-1)}\int\frac{x^{m-1}}{(ax^{2}+bx+c)^{n}}\,dx \\
+  \int\frac{1}{x^{m}(ax^{2}+bx+c)^{n}} = -\frac{1}{c(m-1)x^{n-1}(ax^{2}+bx+c)^{n-1}}-\frac{a(m+2n-3)}{c(m-1)}\int\frac{1}{x^{m-2}(ax^{2}+bx+c)^{n}}\,dx - \frac{b(m+n-2)}{c(m-1)}\int\frac{1}{x^{m-1}(ax^{2}+bx+c)^{n-1}}\,dx
+\end{tabular}
+
+
+
+\subsection{$\sqrt{ax^{2}+bx+c}$}
+
+\begin{tabular}{@{}>{$}l<{$}@{}}
+  \int\frac{1}{\sqrt{ax^{2}+bx+c}} =
+  \begin{cases}
+      \frac{1}{\sqrt{a}}\ln(2\sqrt{a}\sqrt{ax^{2}+bx+c}+2ax+b) \\
+      -\frac{1}{\sqrt{-a}}\sin^{-1}(\frac{2ax+b}{\sqrt{b^{2}-4ac}}) = \frac{1}{\sqrt{a}}\sinh^{-1}(\frac{2ax+b}{\sqrt{4ac-b^{2}}})
+  \end{cases} \\
+  \int\frac{x}{\sqrt{ax^{2}+bx+c}}\,dx = \frac{\sqrt{ax^{2}+bx+c}}{a}-\frac{b}{2a}\int\frac{1}{\sqrt{ax^{2}+bx+c}}\,dx \\
+  \int\frac{1}{x\sqrt{ax^{2}+bx+c}}\,dx =
+    \begin{cases}
+      -\frac{1}{\sqrt{c}}\ln(\frac{2\sqrt{c}\sqrt{ax^{2}+bx+c}+bx+2c}{x}) \\
+      \frac{1}{\sqrt{-c}}\sin^{-1}(\frac{bx+2c}{\abs{x}\sqrt{b^{2}-4ac}}) = -\frac{1}{\sqrt{c}}\sinh^{-1}(\frac{bx+2c}{\abs{x}\sqrt{4ac-b^{2}}})
+    \end{cases} \\
+    \int\sqrt{ax^{2}+bx+c}\,dx = \frac{(2ax+b)\sqrt{ax^{2}+bx+c}}{4a}+\frac{4ac-b^{2}}{8a}\int\frac{1}{\sqrt{ax^{2}+bx+c}}\,dx \\
+    \int x\sqrt{ax^{2}+bx+c}\,dx = \frac{\sqrt{ax^{2}+bx+c})^{\frac{3}{2}}}{3a}-\frac{b(2ax+b)}{8a^{2}}\sqrt{ax^{2}+bx+c}  -\frac{b(4ac-b^{2})}{16a^{2}}\int\frac{1}{\sqrt{ax^{2}+bx+c}}\,dx \\
+    \int\frac{\sqrt{ax^{2}+bx+c}}{x}\,dx = \sqrt{ax^{2}+bx+c}+\frac{b}{2}\int\frac{1}{\sqrt{ax^{2}+bx+c}}\,dx + c\int\frac{1}{x\sqrt{ax^{2}+bx+c}}\,dx \\
+    \int(ax^{2}+bx+c)^{n+\frac{1}{2}}\,dx = \frac{(2ax+b)(ax^{2}+bx+c)^{n+\frac{1}{2}}}{4a(n+1)}+\frac{(2n+1)(4ac-b^{2})}{8a(n+1)}\int(ax^{2}+bx+c)^{n-\frac{1}{2}}\,dx \\
+    \int x(ax^{2}+bx+c)^{n+\frac{1}{2}}\,dx = \frac{(ax^{2}+bx+c)^{n+\frac{3}{2}}}{a(2n+3)}-\frac{b}{2a}\int(ax^{2}+bx+c)^{n+\frac{1}{2}}\,dx \\
+    \int\frac{1}{(ax^{2}+bx+c)^{n+\frac{1}{2}}}\,dx = \frac{2(2ax+b)}{(2n-1)(4ac-b^{2})(ax^{2}+bx+c)^{n-\frac{1}{2}}}+\frac{8a(n-1)}{(2n-1)(4ac-b^{2})}\int\frac{1}{(ax^{2}+bx+c)^{n-\frac{1}{2}}} \\
+    \int\frac{1}{x(ax^{2}+bx+c)^{n+\frac{1}{2}}}\,dx = \frac{1}{c(2n-1)(ax^{2}+bx+c)^{n-\frac{1}{2}}}+\frac{1}{c}\int\frac{1}{x(ax^{2}+bx+c)^{n-\frac{1}{2}}}\,dx -\frac{b}{2c}\int\frac{1}{(ax^{2}+bx+c)^{n+\frac{1}{2}}}\,dx
+  \end{tabular}
+
+
+
+\subsection{$e^{ax}$}
+  \begin{tabular}{@{}>{$}l<{$}@{}}
+      \int e^{ax} \,d x = \frac{e^{ax}}{a} \\
+      \int xe^{ax} \,d x = \frac{e^{ax}}{a} (x-frac{1}{a}) \\
+      \int x^{n}e^{ax} \,dx = \frac{x^{n}e^{ax}}{a}-\frac{n}{a}\int x^{n-1}e^{ax}\,dx = \frac{e^{ax}}{a}(x^{n}-\frac{nx^{n-1}}{a}+\frac{n(n-1)x^{n-2}}{a^{2}}-\cdots\frac{(-1)^{n}n!}{a^{n}}) \\
+      \int \frac{e^{ax}}{x}\,dx = \ln x + \frac{ax}{1\cdot 1!}+\frac{(ax)^{2}}{2\cdot 2!}+\frac{(ax)^{3}}{3\cdot 3!}+\cdots
+  \end{tabular}

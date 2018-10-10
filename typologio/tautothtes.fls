@@ -1,0 +1,9 @@
+PWD /home/vangelis/Desktop/My_Projects/typologio
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /home/vangelis/.texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT tautothtes.tex
+OUTPUT tautothtes.log
+OUTPUT tautothtes.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
