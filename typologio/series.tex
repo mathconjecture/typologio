@@ -1,0 +1,194 @@
+\input{../preamble.tex}
+\input{../definitions.tex}
+
+
+\begin{document}
+
+\section{Αριθμητικές Σειρές}
+
+\subsection{Αριθμητική Πρόοδος}
+
+$ a + (a+d) + (a+2d) + \cdots + (a+(n-1)d) = \frac{1}{2} n[2a + (n-1)d] =
+\frac{1}{2} n(a+1) $ 
+όπου $l = a + (n-1)d$ είναι ο τελευταίος όρος.
+
+Μερικές ειδικές περιπτώσεις είναι
+$ 1 + 2 + 3 + \cdots + n = \frac{1}{2} n(n+1) $ 
+$ 1 + 3 + 5 + \cdots + (2n-1) = n^{2} $ 
+
+\subsection{Γεωμετρική Σειρά}
+
+$ a + ar + ar^{2} + ar^{3} + \cdots + ar^{n-1} = \frac{a(1-r^{n})}{1-r} =
+\frac{a-rl}{1-r}$
+όπου $ l=ar^{n-1} $ είναι ο τελευταίος όρος και $ r\neq 1 $. 
+
+Αν $ -1<r<1 $, τότε $ a + ar + ar^{2} + ar^{3} + \cdots = \frac{a}{1-r}
+$. 
+
+\subsection{Αριθμητικο-Γεωμετρική Σειρά}
+$ a + (a+d)r + (a+2d)r^{2} + \cdots + [a+(n-1)r^{n-1}] = \frac{a(1-r^{n})}{1-r}
+= \frac{a-rl}{1-r} $ 
+όπου $ r\neq 1 $, τότε
+$ a + (a+d)r + (a+2d)r^{2} + \cdots = \frac{a}{1-r} + \frac{rd}{(1-r)^{2}}$. 
+
+\subsection{Αθροίσματα Δυνάμεων θετικών ακεραίων}
+$ 1^{p} + 2^{p} + 3^{p} + \cdots + n^{p} = \frac{n^{p+1}}{p+1} +
+\frac{1}{2} n^{p} + \frac{B_{1} p n^{p-1}}{2!} - \frac{B_{2}
+p(p-1)(p-2)n^{p-3}}{4!} + \cdots $
+όπου η σειρά τερματίζει στο $ n^{2} $ ή στο $ n $ αναλόγως αν ο $ p $ είναι
+περιττός ή άρτιος, και $ B_{k} $ είναι οι αριθμοί \textlatin{Bernoulli}.
+
+Μερικές ειδικές περιπτώσεις είναι
+\begin{tabular}{l}
+    $1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2} $ \\ 
+    $1^{2} + 2^{2} + 3^{2} + \cdots + n^{2} = \frac{n(n+1)(2n+1)}{6} $ \\
+    $1^{3} + 2^{3} + 3^{3} + \cdots + n^{3} = \frac{n^{2}(n+1)^{2}}{4} =
+    (1+2+3+\cdots + n)^{2}$ \\
+    $ 1^{4} + 2^{4} + 3^{4} + \cdots + n^{4} =
+    \frac{n(n+1)(2n+1)(3n^{2}+3n-1)}{30}$ \\
+\end{tabular} 
+
+Αν $ S_{k} = 1^{k} + 2^{k} + 3^{k} + \cdots + n^{k} $ όπου $ k $ και $ n
+$ είναι θετικοί ακέραιοι, τότε
+\[
+    \binom{k+1}{1} S_{1} + \binom{k+1}{2} S_{2} + \cdots + \binom{k+1}{k}
+    S_{k} = (n+1)^{k+1} - (n+1).
+\] 
+
+\subsection{Σειρές αντίστροφων δυνάμεων θετικών ακεραίων}
+
+\begin{tabular}{l}
+    $ 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \cdots =
+    \ln{2} $ \\
+    $ 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \cdots =
+    \frac{\pi}{4} $ \\
+    $ 1 - \frac{1}{4} + \frac{1}{7} - \frac{1}{10} + \frac{1}{13} - \cdots =
+    \frac{\pi \sqrt{3}}{9} + \frac{1}{3} \ln{2} $ \\
+    $ 1 - \frac{1}{5} + \frac{1}{9} - \frac{1}{13} + \frac{1}{17} - \cdots =
+    \frac{\pi \sqrt{2}}{8} + \frac{\sqrt{2} \ln{(1 + \sqrt{2})})}{4} $ \\
+    $ \frac{1}{2} - \frac{1}{5} + \frac{1}{8} - \frac{1}{11} + \frac{1}{14}
+    - \cdots = \frac{\pi \sqrt{3}}{9} + \frac{1}{3} \ln{2}$ \\
+    $ \frac{1}{1^{2}} + \frac{1}{2^{2}} + \frac{1}{3^{2}} + \frac{1}{4^{2}}
+    + \cdots = \frac{\pi ^{2}}{6} $ \\
+    $ \frac{1}{1^{4}} + \frac{1}{2^{4}} + \frac{1}{3^{4}} + \frac{1}{4^{4}}
+    + \cdots = \frac{\pi^{4}}{90}  $ \\
+    $ \frac{1}{1^{6}} + \frac{1}{2^{6}} + \frac{1}{3^{6}} + \frac{1}{4^{6}}
+    + \cdots = \frac{\pi ^{6}}{945} $ \\
+    $ \frac{1}{1^{2}} - \frac{1}{2^{2}} + \frac{1}{3^{2}} - \frac{1}{4^{2}}
+    + \cdots = \frac{\pi ^{2}}{12} $ \\
+    $ \frac{1}{1^{4}} - \frac{1}{2^{4}} + \frac{1}{3^{4}} - \frac{1}{4^{4}}
+    + \cdots = \frac{7 \pi ^{4}}{720} $ \\
+    $ \frac{1}{1^{6}} - \frac{1}{2^{6}} + \frac{1}{3^{6}} - \frac{1}{4^{6}}
+    + \cdots = \frac{31 \pi ^{6}}{30240} $ \\
+    $ \frac{1}{1^{2}} + \frac{1}{3^{2}} + \frac{1}{5^{2}} + \frac{1}{7^{2}}
+    + \cdots = \frac{\pi ^{2}}{8} $ \\
+    $ \frac{1}{1^{4}} + \frac{1}{3^{4}} + \frac{1}{5^{4}} + \frac{1}{7^{4}}
+    + \cdots = \frac{\pi ^{4}}{96}  $ \\
+    $ \frac{1}{1^{6}} + \frac{1}{3^{6}} + \frac{1}{5^{6}} + \frac{1}{7^{6}} +
+    \cdots = \frac{\pi ^{6}}{960} $ \\
+    $ \frac{1}{1^{3}} - \frac{1}{3^{3}} + \frac{1}{5^{3}} - \frac{1}{7^{3}} +
+    \cdots = \frac{\pi ^{3}}{32} $ \\
+    $ \frac{1}{3^{3}} + \frac{1}{3^{3}} - \frac{1}{5^{3}} + \frac{1}{7^{3}}
+    + \cdots = \frac{3 \pi ^{3}\sqrt{2}}{128} $ \\
+    $ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} +
+    \frac{1}{7 \cdot 9} + \cdots = \frac{1}{2} $ \\
+    $ \frac{1}{1 \cdot 3} + \frac{1}{2 \cdot 4} + \frac{1}{3 \cdot 5} +
+    \frac{1}{4 \cdot 6} + \cdots = \frac{3}{4} $ \\
+    $ \frac{1}{1^{2} \cdot 3^{2}} + \frac{1}{3^{2} \cdot 5^{2}} +
+    \frac{1}{5^{2} \cdot 7^{2}} + \frac{1}{7^{2} \cdot 9^{2}} =
+    \frac{\pi ^{2} - 8}{16}   $ \\
+    $ \frac{1}{1^{2} \cdot 2^{2} \cdot 3^{2}} + \frac{1}{2^{2} \cdot 3^{2} \cdot
+    4^{2}} + \frac{1}{3^{2} \cdot 4^{2} \cdot 5^{2}} + \cdots =
+    \frac{4 \pi ^{2} - 39}{16} $ \\
+\end{tabular}
+
+
+% TODO check the other series with u, B_p, E_p ... 
+
+\subsection{Αλλες Σειρές}
+\begin{tabular}{l}
+$ \frac{1}{2} + \cos a + \cos{2a} + \cdots + \cos{na} = \frac{\sin{(n+
+\frac{1}{2})}a}{2 \sin{(\frac{a}{2})}}$ \\
+$ \sin{a} + \sin{2a} + \sin{3a} + \cdots + \sin{na} =
+\frac{\sin{[\frac{1}{2} (n+1)]a}  \sin{\frac{1}{2} n a}
+}{\sin{\frac{a}{2}}}  $ \\
+$ 1 + r \cos{a} + r^{2} \cos{2a} + r^{3} \cos{3a} + \cdots = \frac{1 - r
+\cos{a}}{1 - 2r \cos{a} + r^{2}}, \abs{r}<1$ \\
+$ r \sin{a} + r^{2} \sin{2a} + r^{3} \sin{3a} + \cdots = \frac{r \sin{a}}
+{1 - 2r \cos{a} + r^{2}}, \abs{r}<1$ \\
+$ 1 + r \cos{a} + r^{2} \cos{2a} + \cdots + r^{n} \cos{na} = \frac{r^{n+2}
+\cos{na} - r^{n+1} \cos{(n+1)a - r \cos{a} + 1}}{1 - 2a \cos{a} + r^{2}}$ \\
+$ r \sin{a} + r^{2} \sin{2a} + \cdots r^{n} \sin{na} = \frac{r \sin{a} - r^{n+1}
+\sin{(n+1)a} + r^{n+2} \sin{na}}{1 - 2r \cos{a} + r^{2}} $
+\end{tabular}
+
+%TODO check other summation formulas
+
+
+\section{Σειρές \textlatin{Taylor}}
+
+\[
+    f(x) = f(a) + f'(a)(x-a) + \frac{f''(x)}{2!} (x-a)^{2} + \cdots +
+    \frac{f^{(n-1)}}{(n-1)!} (x-a)^{n-1} + R_{n}
+\] 
+όπου $ R_{n} $ το υπόλοιπο μετά από $n $ όρους, δίνεται από έναν από τους δύο
+παρακάτω τύπους:
+
+\textbf{\textlatin{Lagrange's Form:}} $ R_{n} = \frac{f^{n(\xi)}}{n!} (x-a)^{n} $
+
+\textbf{\textlatin{Cauchy's Form:}} $ R_{n} = \frac{f^{n}(\xi)}{(n-1)!}
+(x-\xi)^{n-1}(x-a) $
+
+Η τιμή $\xi$ η οποία μπορεί να είναι διαφορετική στους 2 τύπους, βρίσκεται
+μεταξύ των $ a $ και $ x$. Ο παραπάνω τύπος ισχύει αν η $ f(x) $ έχει συνεχείς
+παραγώγους, τουλάχιστον $ n $-οστής τάξης. 
+
+Αν $ \lim_{x\to \infty} R_{n} = 0 $, η άπειρη σειρά η οποία προκύπτει ονομάζεται
+σειρά \textlatin{Taylor} της $ f(x) $ για $ x=a $. Αν $ a = 0 $, τότε η σειρά
+ονομάζεται σειρά \textlatin{Maclaurin}. Αυτές οι σειρές, γνωστές και ως
+δυναμοσειρές, συγκλίνουν για κάθε τιμή του $x$ σε κάποιο διάστημα, το οποίο
+ονομάζεται διάστημα σύγκλισης και αποκλίνουν για κάθε τιμή του $x$ εκτός αυτού
+του διαστήματος.
+
+\section{Διωνυμικές Σειρές}
+
+$ (a+x) $<++>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
