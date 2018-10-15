@@ -1,0 +1,318 @@
+\input{../preamble.tex}
+\input{../definitions.tex}
+
+
+
+    \begin{document}
+
+
+
+
+\section{Ορισμός Τριγωνομετρικών αριθμών οξείας γωνίας}
+
+\begin{tabular}{l>{$}l<{$}}
+    Ημίτονο & \sin A = \frac{a}{c} = \frac{\text{απέναντι}}{\text{υποτείνουσα}} \\
+    Συνημίτονο & \cos A = \frac{b}{c} =
+    \frac{\text{προσκείμενη}}{\text{υποτείνουσα}} \\
+    Εφαπτομένη & \tan A = \frac{a}{b} =
+    \frac{\text{απέναντι}}{\text{προσκείμενη}}\\
+    Συνεφαπτομένη & \cot A = \frac{b}{a} =
+    \frac{\text{προσκείμενη}}{\text{απέναντι}} \\
+    Τέμνουσα & \sec A = \frac{c}{b} =
+    \frac{\text{υποτείνουσα}}{\text{προσκείμενη}}\\
+    Συντέμνουσα & \csc a = \frac{c}{a} =
+    \frac{\text{υποτείνουσα}}{\text{απέναντι}} \\
+\end{tabular}  
+
+\section{Ορισμός Τριγωνομετρικών συναρτήσεων}
+
+\begin{tabular}{l}
+    $ \sin A = \frac{y}{r} $ \\
+    $ \cos A = \frac{x}{r} $ \\
+    $ \tan A = \frac{y}{x} $ \\
+    $ \cot A = \frac{x}{y} $ \\
+    $ \sec A = \frac{r}{x} $ \\
+    $ \csc A = \frac{r}{y} $ 
+\end{tabular}
+
+\section{Σχέση μεταξύ μοιρών και ακτινίων}
+
+Η γωνία $ \theta $ σε ακτίνια ορίζεται ως 
+\[
+    \theta = \frac{\text{μήκος τόξου AB}}{\text{ακτίνα}} = \frac{l}{r}
+\] 
+
+Η σχέση η οποία συνδέει μοίρες και ακτίνια είναι 
+\[ 
+    \frac{\SI{}[\mu]{\degree}}{\theta} = \frac{\pi}{\ang{180}} 
+\]
+
+
+\begin{itemize}
+    \item $\SI{1}{radian} = \frac{\ang{180}}{\pi} =
+        \SI{57.29577951308232\dots}{\degree} $    
+    \item \SI{1}{\degree} = \SI{\pi/180}{radians} =
+        \SI{0.0174532925199432957692\dots}{radians}
+\end{itemize}
+
+\section{Σχέσεις μεταξύ Τριγωνομετρικών συναρτήσεων}
+
+
+\begin{tabular}{ll}
+    $ \tan{A} = \frac{\sin{A}}{\cos{A}} $ & $ \sin^{2}{A} + \cos^{2}{A} =1 $ \\
+    $ \cot{A} = \frac{1}{\tan{A}} = \frac{\cos{A}}{\sin{A}} $ & $
+    \sec^{2}{A} - \tan^{2}{A} = 1 $ \\
+    $ \sec{A} = \frac{1}{\cos{A}} $ & $ \csc^{2}{A} - \cot^{2}{A} =1 $ \\
+    $ \csc{A} = \frac{1}{\sin{A}} $
+\end{tabular}
+
+
+\begin{table}
+    \centering
+\begin{tabular}{cccccccc}
+    \toprule \\
+    \minibox[c]{Γωνία Α \\ (μοίρες)} &  \minibox{Γωνία Α \\ (ακτίνια)} & $ \sin{A} $ & $ \cos{A} $ & $ \tan{A} $ &  $ \cot{A} $ & $ \sec{A} $ & $ \csc{A} $ \\
+    \midrule \\
+    \ang{0} & 0 & 0 & 1 & 0 & $\infty$ & 1 & $\infty$ \\
+    \ang{15} & $ \pi / 12 $ & $ \frac{\sqrt{6} - \sqrt{2}}{4} $ & $ \frac{\sqrt{6} + \sqrt{2}}{4} $ & $ 2 - \sqrt{3} $ & $ 2 + \sqrt{3} $ & $ \sqrt{6} - \sqrt{2} $ & $ \sqrt{6} + \sqrt{2} $ \\
+    \ang{30} & $ \pi / 6 $ & $ \frac{1}{2} $ & $ \frac{\sqrt{3}}{2} $ & $ \frac{\sqrt{3}}{3} $ & $ \sqrt{3} $ & $ \frac{2 \sqrt{3}}{3} $ & $2$ \\
+    \ang{45} & $ \pi / 4 $ & $ \frac{\sqrt{2}}{2} $ & $ \frac{\sqrt{2}}{2} $ & $1$ & $1$ & $ \sqrt{2} $ & $ \sqrt{2} $ \\
+    \ang{60} & $ \pi / 3 $ & $ \frac{\sqrt{3}}{2} $ & $ \frac{1}{2} $ & $ \sqrt{3} $ & $ \frac{\sqrt{3}}{3} $ & $ 2 $ & $ \frac{2 \sqrt{3}}{3} $ \\   
+    \ang{75} & $ \frac{5 \pi}{12} $ & $ \frac{\sqrt{6} + \sqrt{2}}{4} $ & $ \frac{\sqrt{6} - \sqrt{2}}{4} $ & $ 2 + \sqrt{3} $ & $ 2 - \sqrt{3} $ & $ \sqrt{6} + \sqrt{2} $ &  $ \sqrt{6} - \sqrt{2} $ \\
+    \ang{90} & $ \frac{\pi}{2} $ & $ 1 $ & $ 0 $ & $ \pm \infty $ & $ 0 $ & $ \pm \infty $ & $ 1 $ \\
+    \ang{105} & $ \frac{7 \pi}{12} $ & $ \frac{\sqrt{6} + \sqrt{2}}{4} $ & $ - \frac{\sqrt{6} - \sqrt{2}}{4} $ &  $ -( 2 + \sqrt{3} ) $ & $ -2( 2 - \sqrt{3}) $ & $ -(\sqrt{6} + \sqrt{2}) $ & $ \sqrt{6} -
+    \sqrt{2} $ \\
+    \ang{120} & $ \frac{2 \pi}{3} $ & $ \frac{\sqrt{3}}{2} $ & $ - \frac{1}{2} $ & $ - \sqrt{3} $ & $ - \frac{\sqrt{3}}{3} $ & $ -2 $ & $ \frac{2 \sqrt{3}}{3} $ \\
+    \ang{135} & $ \frac{3 \pi}{4} $ & $ \frac{\sqrt{2}}{2} $ & $ - \frac{\sqrt{2}}{2} $ & $ -1 $ & $ -1 $ & $ - \sqrt{2} $ & $ \sqrt{2} $ \\
+    \ang{150} & $ \frac{5 \pi}{6} $ & $ \frac{1}{2} $ & $ - \frac{\sqrt{3}}{2} $ & $ - \frac{\sqrt{3}}{3} $ & $ - \sqrt{3} $ & $ - \frac{2 \sqrt{3}}{3} $ & $ 2 $ \\ 
+    \ang{165} & $ \frac{11 \pi}{12} $ & $ \frac{\sqrt{6} - \sqrt{2}}{4} $ & $ - \frac{\sqrt{6} + \sqrt{2}}{4} $ & $ - ( 2 - \sqrt{3} ) $ & $ -2 ( 2 + \sqrt{3} ) $ & $ -(\sqrt{6} - \sqrt{2}) $ & $ \sqrt{6}
+    + \sqrt{2} $ \\ 
+    \ang{180} & $ \pi $ & $ 0 $ & $ -1 $ & $ 0 $ & $ \mp \infty $ & $ -1 $ & $ \pm \infty $ \\
+    \ang{195} & $ \frac{13 \pi}{12} $ & $ - \frac{\sqrt{6} - \sqrt{2}}{4} $ & $
+    - \frac{\sqrt{6} + \sqrt{2}}{4} $ & $  2 - \sqrt{3} $ & $  2 + \sqrt{3} $ &  $ - (\sqrt{6} - \sqrt{2}) $ & $ - (\sqrt{6} + \sqrt{2}) $ \\ 
+    \ang{210} & $ \frac{7 \pi}{6} $ & $ - \frac{1}{2} $ & $ - \frac{\sqrt{3}}{2} $ & $ \frac{\sqrt{3}}{3} $ & $ \sqrt{3} $ & $ - \frac{2 \sqrt{3}}{3} $ & $ -2 $ \\
+    \ang{225} & $ \frac{5 \pi}{4} $ & $ - \frac{\sqrt{2}}{2} $ & $ - \frac{\sqrt{2}}{2} $ & $ 1 $ & $ 1 $ & $ - \sqrt{2} $ & $ - \sqrt{2} $ \\
+    \ang{240} & $ \frac{4 \pi}{3} $ & $ - \frac{\sqrt{3}}{2} $ & $ - \frac{1}{2} $ & $ \sqrt{3} $ & $ \frac{\sqrt{3}}{3} $ & $ -2 $ & $ - \frac{2 \sqrt{3}}{3} $ \\
+    \ang{255} & $ \frac{17 \pi}{12} $ & $ - \frac{\sqrt{6} + \sqrt{2}}{4} $ & $ - \frac{\sqrt{6} - \sqrt{2}}{4} $ & $  2 + \sqrt{3} $ & $  2 - \sqrt{3} $ & $ - (\sqrt{6} + \sqrt{2}) $ & $ - (\sqrt{6} -
+    \sqrt{2}) $ \\
+    \ang{270} & $ \frac{3 \pi}{2} $ & $ -1 $ & $ 0 $ & $ \pm \infty $ & $ 0 $ & $ \mp \infty $ & $ -1 $ \\
+    \ang{285} & $ \frac{19 \pi}{12} $ & $ - \frac{\sqrt{6} + \sqrt{2}}{4} $ & $ \frac{\sqrt{6} - \sqrt{2}}{4} $ & $ - ( 2 + \sqrt{3} ) $ & $ - ( 2 - \sqrt{3}) $ & $ \sqrt{6} + \sqrt{2} $ & $ -(\sqrt{6} -
+    \sqrt{2}) $ \\
+    \ang{300} & $ \frac{5 \pi}{3} $ & $ - \frac{\sqrt{3}}{2} $ & $ \frac{1}{2} $ & - $\sqrt{3} $ & $ - \frac{\sqrt{3}}{3} $ & $ 2 $ & $ - \frac{2 \sqrt{3}}{3} $ \\    
+    \ang{315} & $ \frac{7 \pi}{4} $ & $ - \frac{\sqrt{2}}{2} $ & $ \frac{\sqrt{2}}{2} $ & $ -1 $ & $ -1 $ $ \sqrt{2} $ & $ - \sqrt{2} $ \\
+    \ang{330} & $ \frac{11 \pi}{6} $ & $ - \frac{1}{2} $ & $ \frac{\sqrt{3}}{2}$ & $ - \frac{\sqrt{3}}{3} $ & $ - \sqrt{3} $ & $ \frac{2\sqrt{3}}{3} $ & $ - 2 $ \\ 
+    \ang{345} & $ \frac{23 \pi}{12} $ & $ - \frac{\sqrt{6} - \sqrt{2}}{4} $ & $ \frac{\sqrt{6} + \sqrt{3}}{4} $ & $ - ( 2 - \sqrt{3}) $ & $ -2 ( 2 + \sqrt{3}) $ & $ \sqrt{6} - \sqrt{2} $ & $ 
+    - (\sqrt{6} + \sqrt{2}) $ \\
+    \ang{360} & $ 2 \pi $ & $ 0 $ & $ 1 $ & $ 0 $ & $ \mp \infty $ & $ 1 $ & $ \mp \infty $ \\
+    \bottomrule
+\end{tabular}
+\end{table}
+
+\section{Γραφικές Παραστάσεις των τριγωγωνομετρικών συναρτήσεων}
+
+
+\section{Συναρτήσεις Αρνητικών γωνιών}
+\begin{tabular}{l} 
+    $ \sin{(-A)} = - \sin{A} $ \\
+    $ \cos{(-A)} = \cos{A} $ \\
+    $ \tan{(-A)} = - \tan{A} $ \\
+    $ \cot{(-A)} = - \cot{A} $ \\
+    $ \sec{(-A)} = \sec{A} $ \\
+    $ \csc{(-A)} = - \csc{A} $ 
+\end{tabular}
+
+
+\section{Τριγωνομετρικοί αριθμοί Αθροίσματος} 
+
+\begin{tabular}{l}
+    $ \sin{(A+B)} = \sin{A} \cos{B} + \cos{A} \sin{B} $ \\
+    $ \sin{(A-B)} = \sin{A} \cos{B} - \cos{A} \sin{B} $ \\
+    $ \cos{(A+B)} = \cos{A} \cos{B} - \sin{A} \sin{B} $ \\
+    $ \cos{(A-B)} = \cos{A} \cos{B} + \sin{A} \sin{B} $ \\
+    $ \tan{(A+B)} = \frac{\tan{A} + \tan{B}}{1 - \tan{A} \tan{B}} $ \\
+    $ \tan{(A-B)} = \frac{\tan{A} - \tan{B}}{1 + \tan{A} \tan{B}} $ \\ 
+    $ \cot{(A+B)} = \frac{\cot{A} \cot{B} - 1}{\cot{B} + \cot{A}} $ \\
+    $ \cot{(A-B)} = \frac{\cot{A} \cot{B} + 1}{\cot{B} - \cot{A}} $ 
+\end{tabular}
+
+\section{Αναγωγή στο Πρώτο Τεταρτημόριο}
+
+\begin{center}
+\begin{tabular}{*{6}c}
+    \toprule \\
+    & $ -A $  & $ \frac{\pi}{2} \pm A $ & $ \pi \pm A $ & $ \frac{3 \pi}{2}
+    \pm A $ & $ 2k \pi \pm A $ \\
+    \midrule \\
+    $ \sin{} $ & $ - \sin{A} $ & $ \cos{A} $ & $ \sin{A} $ & $ - \cos{A}
+    $ & $ \pm \sin{A} $a \\
+    $ \cos $ & $ \cos{A}  $ & $ \mp \sin{A} $ & $ - \cos{A} $ & $ \mp
+    \sin{A} $ & $ \cos{A} $ \\
+    $ \tan{} $ & $ - \tan{A} $ & $ \mp \cot{A} $ & $ \pm \tan{A} $ & $ \mp
+    \cot{A} $ & $ \pm \tan{A} $ \\
+    $ \sec{A} $ & $ \sec{A} $ & $ \mp \csc{A} $ & $ - \sec{A} $ & $ \pm
+    \csc{} $ & $ \sec{A} $ \\
+    $ \csc{} $ & $ - \csc{A} $ & $ \sec{A} $ & $ \mp \csc{A} $ & $ - \sec{A}$ &
+    $ \pm \csc{A} $ \\
+    $ \cot{} $ & $ - \cot{A} $ & $ \mp \tan{A} $ & $ \pm \cot{A} $ & $ \mp
+    \tan{A} $ & $ \pm \cot{A} $ \\ 
+    \bottomrule
+\end{tabular}
+\end{center}
+
+
+\section{Σχέσεις μεταξύ τριγωνομετρικών συναρτήσεων}
+
+\begin{center}
+    \begin{tabular}{*{7}c}
+        \toprule \\
+    & $ \sin{A} = u $ & $ \cos{A} = u $ & $ \tan{A} = u $ & $ \sec{A} = u $ & $
+    \csc{A} = u $ \\
+    \midrule \\
+        $ \sin{A} $ & $ u $ & $ \sqrt{1-u^{2}} $ & $ \frac{u}{\sqrt{1 + u^{2}}
+    }$ & $ \frac{\sqrt{u^{2}-1} }{u} $ & $ \frac{1}{u} $ \\ 
+        $ \cos{A} $ & $ \sqrt{1-u^{2}} $ & $ u $ & $ \frac{1}{\sqrt{1 + u^{2}}}
+        $ & $ \frac{u}{\sqrt{1 + u^{2}}} $ & $ \frac{1}{u} $ & $
+        \frac{\sqrt{u^{2}-1}}{u} $ \\  
+        $ \tan{A} $ & $ \frac{u}{ \sqrt{1-u^{2}}} $ & $ \frac{ \sqrt{1-u^{2}}}{
+        u} $ & $ u $ & $ \frac{1}{u} $ & $ \sqrt{u^{2}-1} $ & $
+        \frac{1}{\sqrt{u^{2}-1}} $ \\
+        $ \cot{A} $ & $ \frac{ \sqrt{1-u^{2}}}{u} $ & $ \frac{u}{
+    \sqrt{1-u^{2}}} $ & $ \frac{1}{u} $ & $ u $ & $ \frac{1}{\sqrt{u^{2}-1}} $ & $
+    \sqrt{u^{2}-1} $ \\
+        $ \sec{A} $ & $ \frac{1}{ \sqrt{1-u^{2}}} $ & $ \frac{1}{u} $ & 
+        $\sqrt{1 + u^{2}} $ & $ \frac{\sqrt{1 + u^{2}}}{u} $ & $ u $ & 
+            $ \frac{u}{\sqrt{u^{2}-1}} $ \\
+        $ \csc{A} $ & $ \frac{1}{u} $ & $ \frac{1}{\sqrt{1-u^{2}}} $ &
+        $ \frac{\sqrt{1 + u^{2}}}{u} $ & $\sqrt{1 + u^{2}}$ &
+        $ \frac{u}{\sqrt{u^{2}-1}} $ & $ u $ \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+
+\section {Γωνίες Διπλασίου Τόξου}
+
+\begin{tabular}{l}
+    $ \sin{2A} = 2 \sin{A} \cos{A} $ \\
+    $ \cos{2A} = \cos^{2}{A} - \sin^{2}{A} = 1 - 2 \sin^{2}{A} = 2
+    \cos^{2}{A} -1 $ \\
+    $ \tan{2A} = \frac{2 \tan{A}}{1 - \tan^{2}{A}} $ 
+\end{tabular}
+
+\section{Γωνίες Υποδιπλάσιου Τόξου}
+
+
+\begin{tabular}{>{$}l<{$}}
+     \sin{\frac{A}{2}} = \begin{cases}
+        \sqrt{\frac{1 - \cos{A}}{2}} \qq{αν $\frac{A}{2}$ είναι στο 1ο ή 2ο 
+        Τεταρτημόριο} \\
+        -\sqrt{\frac{1 - \cos{A}}{2}} \qq{αν $\frac{A}{2}$ είναι στο 3ο ή 4ο
+        Τεταρτημόριο}
+\end{cases} \\
+    \cos{\frac{A}{2}} = \begin{cases}
+        \sqrt{\frac{1 + \cos{A}}{2}} \qq{αν $\frac{A}{2}$ είναι στο 1ο ή 4ο 
+        Τεταρτημόριο} \\
+        -\sqrt{\frac{1 + \cos{A}}{2}} \qq{αν $\frac{A}{2}$ είναι στο 2ο ή 3ο
+        Τεταρτημόριο}
+    \end{cases} \\
+    \begin{aligned}
+         \tan{\frac{A}{2}} &= \begin{cases}
+      \sqrt{\frac{1 - \cos{A}}{1 + \cos{A}}} \qq{αν $\frac{A}{2}$ είναι στο
+            1ο ή 3ο Τεταρτημόριο} \\
+        -\sqrt{\frac{1 - \cos{A}}{1 + \cos{A}}} \qq{αν $\frac{A}{2}$ είναι στο
+            2ο ή 4ο Τεταρτημόριο} 
+    \end{cases} \\
+                            &= \frac{\sin{A}}{1 + \cos{A}} = \frac{1 -
+                            \cos{A}}{\sin{A}} = \csc{A} - \cot{A} 
+    \end{aligned}
+\end{tabular}
+
+
+\section{Γωνίες Πολλαπλάσιου Τόξου}
+
+\begin{tabular}{l}
+$ \sin{3A} = 3 \sin{A} - 4 \sin^{3}{A} $ \\
+$ \cos{3A} = 4 \cos^{3}{A} - 3 \cos{A} $ \\
+$ \tan{3A} = \frac{3 \tan{A} - \tan^{3}{A}}{1 - 3 \tan^{2}{A}} $ \\
+$ \sin{4A} = 4 \sin{A} \cos{A} - 8 \sin^{3}{A} \cos{A} $ \\
+$ \cos{4A} = 8 \cos^{4}A - 8 \cos^{2}{A} + 1 $ \\
+$ \tan{4A} = \frac{4 \tan{A} - 4 \tan^{3}{A}}{1 - 6 \tan^{2}{A} + \tan^{4}A} $
+\\
+\end{tabular}
+
+\section{Δυνάμεις Τριγωνομετρικών Συναρτήσεων}
+
+\begin{tabular}{l}
+    $ \sin^{2}{A} = \frac{1 - \cos{2A}}{2} $ \\
+    $ \cos^{2}{A} = \frac{1 + \cos{2A}}{2} $ \\
+    $ \sin^{3}{A} = \frac{3 \sin{A} - \sin{3A}}{4} $ \\
+    $ \cos^{3}{A} = \frac{3 \cos{A} + \cos{3A}}{4} $ \\
+    $ \sin^{4}{A} = \frac{3 - 4 \cos{2A} + \cos{4A}}{8} $ \\
+    $ \cos^{4}{A} = \frac{3 + 4 \cos{2A} + \cos{4A}}{8} $ 
+\end{tabular}
+
+
+\section{Aθροίσματα Διαφορές και Γινόμενα Τριγωνομετρικών Συναρτήσεων}  
+   \begin{tabular}{l}
+       $ \sin{A} + \sin{B} =2 \sin{\frac{A + B}{2} \cos{\frac{A + B}{2}}}  $ \\ 
+       $ \sin{A} - \sin{B} = 2 \cos{\frac{A + B}{2}} \sin{\frac{A - B}{2}}  $ \\        
+       $ \cos{A} + \cos{B} = 2 \cos{\frac{A + B}{2}} \cos{\frac{A - B}{2}}  $ \\
+       $ \cos{A} - \cos{B} = 2 \sin{\frac{A + B}{2} \sin{\frac{B - A}{2}}} $ \\
+       $ \sin{A} \sin{B} = \frac{1}{2} \{\cos{(A-B)} - \cos{(A-B)}\} $ \\
+       $ \cos{A} \cos{B} = \frac{1}{2} \{\cos{(A-B)} + \cos{(A+B)}\} $ \\
+       $ \sin{A} \cos{B} = \frac{1}{2} \{\sin{(A-B)} + \sin{(A+B)}\} $ 
+   \end{tabular} 
+
+   \section{Αντίστροφες Τριγωνομετρικές Συναρτήσεις}
+
+   \section{Σχέσεις μεταξύ αντίστροφων Τριγωνομετρικών Συναρτήσεων}
+
+   \begin{tabular}{l}
+       $ \sin^{-1}{x} + \cos^{-1}{x} = \frac{\pi}{2} $ \\
+       $ \tan^{-1}{x} + \cot^{-1}{x} = \frac{\pi}{2} $ \\
+       $ \sec^{-1}{x} + \csc^{-1}{x} = \frac{\pi}{2} $ \\
+       $ \sec^{-1}{x} = \cos^{-1}{\frac{1}{x}} $ \\
+       $ \csc^{-1}{x} = \sin^{-1}{\frac{1}{x}} $ \\
+       $ \cot^{-1}{x} = \tan^{-1}{\frac{1}{x}} $ 
+   \end{tabular}
+
+   \begin{tabular}{l}
+       $ \sin^{-1}{(-x)} = - \sin^{-1}{x} $ \\
+       $ \cos^{-1}{(-x)} = \pi - \cos^{-1}{x} $ \\
+       $ \tan^{-1}{(-x)} = - \tan^{-1}{x} $ \\
+       $ \cot^{-1}{(-x)} = \pi - \cot^{-1}{x} $ \\
+       $ \sec^{-1}{(-x)} = \pi - \sec^{-1}{x} $ \\
+       $ \csc^{-1}{(-x)} = - \csc^{-1}{x} $ 
+   \end{tabular}
+   
+\section{Γραφικές Παραστάσεις Αντίστροφων Τριγωνομετρικών Συναρτήσεων}
+
+\section{Σχέσεις μεταξύ πλευρών και γωνιών τριγώνου}
+
+\subsection{Νόμος των Ημιτόνων}
+\[
+ \frac{a}{\sin{A}} = \frac{b}{\sin{B}} = \frac{c}{\sin{C}} 
+\] 
+
+\subsection{Νόμος των Συνημιτόνων}
+
+\begin{align*}
+    c^{2} &= a^{2} + b^{2} - 2ab \cos{C} \\
+    b^{2} &= a^{2} + c^{2} - 2ac \cos{B} \\
+    a^{2} &= b^{2} + c^{2} - 2bc \cos{A} 
+\end{align*} 
+
+\subsection{Νόμος των Εφαπτομένων}
+
+\begin{align*} 
+   \frac{a + b}{a - b} &= \frac{\tan{(\frac{A + B}{2})}}{\tan{(\frac{A - B}{2}}} 
+   \end{align*}
+
+   \[
+       \sin{A} = \frac{2}{bc} \sqrt{s(s-a)(s-b)(s-c)} 
+   \]
+   όπου $ s= \frac{1}{2} (a+b+c) $ είναι η ημιπερίμετρος του τριγώνου.
+
+   "TODO παρόμοιες σχέσεις όπου χρειάζεται
+
+   \end{document}
