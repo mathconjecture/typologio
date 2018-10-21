@@ -1,0 +1,205 @@
+
+\section{Σειρές \textlatin{Taylor}}
+
+\[
+	f(x) = f(a) + f'(a)(x-a) + \frac{f''(x)}{2!} (x-a)^{2} + \cdots +
+	\frac{f^{(n-1)}}{(n-1)!} (x-a)^{n-1} + R_{n}
+\] 
+
+όπου $ R_{n} $ το υπόλοιπο μετά από $n $ όρους, δίνεται από έναν από τους δύο
+παρακάτω τύπους:
+
+\textbf{\textlatin{Lagrange's Form:}} $ R_{n} = \frac{f^{n(\xi)}}{n!} (x-a)^{n} $
+
+\textbf{\textlatin{Cauchy's Form:}} $ R_{n} = \frac{f^{n}(\xi)}{(n-1)!}
+(x-\xi)^{n-1}(x-a) $
+
+Η τιμή $\xi$ η οποία μπορεί να είναι διαφορετική στους 2 τύπους, βρίσκεται
+μεταξύ των $ a $ και $ x$. Ο παραπάνω τύπος ισχύει αν η $ f(x) $ έχει συνεχείς
+παραγώγους, τουλάχιστον $ n $-οστής τάξης. 
+
+Αν $ \lim_{x\to \infty} R_{n} = 0 $, η άπειρη σειρά η οποία προκύπτει ονομάζεται
+σειρά \textlatin{Taylor} της $ f(x) $ για $ x=a $. Αν $ a = 0 $, τότε η σειρά
+ονομάζεται σειρά \textlatin{Maclaurin}. Αυτές οι σειρές, γνωστές και ως
+δυναμοσειρές, συγκλίνουν για κάθε τιμή του $x$ σε κάποιο διάστημα, το οποίο
+ονομάζεται διάστημα σύγκλισης και αποκλίνουν για κάθε τιμή του $x$ εκτός αυτού
+του διαστήματος.
+
+\section{Διωνυμικές Σειρές}
+
+\begin{align*}
+	(a+x)^{n} &= a^{n} + na^{n-1}x + \frac{n (n-1)}{2!} a^{n-2}x^{2} +
+	\frac{n(n-3)(n-2)}{3!} a^{n-3}x^{3} + \cdots \\
+			  &= a^{n} + \binom{n}{1}
+			  a^{n-1}x + \binom{n}{2} a^{n-2}x^{2} + \binom{n}{3} a^{n-3}x^{3} +
+			  \cdots
+\end{align*}
+
+Ειδικές περιπτώσεις:
+
+\begin{tabular}{ll}
+	$ (a+x)^{2} = a^{2} + 2ax + x^{2} $ & \\
+	$ (a+x)^{3} = a^{3} + 3a^{2}x + 3ax^{2} + x^{3} $ &  \\
+	$ (a+x)^{4} = a^{4} + 4a^{3}x + 6a^{2}x^{2} + 4ax^{3} + x^{4} $ & \\
+	$ (1+x)^{-1} = 1 - x + x^{2} - x^{3} + x^{4} - \cdots $ & $-1<x<1$ \\
+	$ (1+x)^{-2} = 1 - 2x + 3x^{2} - 4x^{3} + 5x^{4} - \cdots $ & $-1<x<1$ \\
+	$ (1+x)^{-3} = 1 - 3x + 6x^{2} - 10x^{3} + 15x^{4} - \cdots $ & $-1<x<1$ \\
+	$ (1+x)^{- \frac{1}{2}} = 1 - \frac{1}{2}x + \frac{1 \cdot 3}{2 \cdot
+4}x^{2} - \frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6} x^{3} + \cdots $ &
+$-1<x\leq 1 $ \\
+$ (1+x)^{\frac{1}{2}} = 1 + \frac{1}{2} x - \frac{1}{2 \cdot 4} x^{2} +
+	\frac{1 \cdot 3}{2 \cdot 4 \cdot 6} x^{3} - \cdots$ & $-1<x\leq 1$ \\
+	$ (1+x)^{-\frac{1}{3}} = 1 - \frac{1}{3} x + \frac{1 \cdot 4}{3 \cdot 6}
+	x^{2} - \frac{1 \cdot 4 \cdot 7}{3 \cdot 6 \cdot 9} x^{3} + \cdots$ &
+	$-1<x\leq 1$  
+\end{tabular}
+
+\section{Σειρές Εκθετικών και Λογαριθμικών Συναρτήσεων}
+\begin{tabular}{ll}
+	$ e^{x} = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \cdots  $ &
+	$-\infty<x<\infty$ \\
+	$ a^{x} = e^{x\ln a} = 1 + x\ln a + \frac{(x\ln a)^{2}}{2!} +
+	\frac{(x\ln a)^{3}}{3!} + \cdots  $ & $ -\infty < x < \infty $ \\
+	$ \ln{(1+x)} = x - \frac{x^{2}}{2} + \frac{x^{3}}{3} - \frac{x^{4}}{4}
+	+ \cdots $ & $ -1 < x \leq 1 $ \\
+	$ \frac{1}{2} \ln{(\frac{1+x}{1-x})} = x + \frac{x^{3}}{3} +
+	\frac{x^{5}}{5} + \frac{x^{7}}{7} + \cdots $ & $ -1 < x < 1 $ \\
+	$ \ln{x} = 2\left\{ (\frac{x-1}{x+1} ) + \frac{1}{3} (\frac{x-1}{x+1}
+)^{3} + \frac{1}{5} (\frac{x-1}{x+1})^{5} + \cdots  \right\} $ & $ x>0 $ \\
+$ \ln{x} = (\frac{x-1}{x}) + \frac{1}{2} (\frac{x-1}{x})^{2} +
+	\frac{1}{3} (\frac{x-1}{x} )^{3} + \cdots  $ & $ x \geq \frac{1}{2}
+	$ 
+\end{tabular}
+
+
+\section{Σειρές Τριγωνομετρικών Συναρτήσεων}
+
+\begin{tabular}{ll}
+	$ \sin{x} = x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} - \frac{x^{7}}{7!} +
+	\cdots $  & $ -\infty < x < \infty $ \\
+	$ \cos{x} = 1 - \frac{x^{2}}{2!} + \frac{x^{4}}{4!} - \frac{x^{6}}{6!} +
+	\cdots  $ & $ - \infty < x < \infty $ \\
+	$ \tan{x} = x + \frac{x^{3}}{3} + \frac{2 x^{5}}{15} +
+	\frac{17 x^{7}}{315} + \cdots +
+	\frac{2^{2n}(2^{2n}-1)B_{n}x^{2n-1}}{(2n)!} + \cdots  $ & $
+	\abs{x}< \frac{\pi}{2} $ \\
+	$ \cot{x} = \frac{1}{x} - \frac{x}{3} - \frac{x^{3}}{45} -
+	\frac{2 x^{5}}{945} - \cdots - \frac{2^{2n}B_{n}x^{2n-1}}{(2n)!}
+	-\cdots$ & $ 0 < x < \pi $ \\
+	$ \sec{x} = 1 + \frac{x^{2}}{2} + \frac{5 x^{4}}{24} +
+	\frac{61 x^{6}}{720} + \cdots + \frac{E_{n x^{2n}}}{(2n)!} +
+	\cdots $ & $ \abs{x} < \frac{\pi}{2}  $ \\
+	$ \csc{x} = \frac{1}{x} + \frac{x}{6} + \frac{7 x^{3}}{360} +
+	\frac{31 x^{5}}{15120} + \cdots +
+	\frac{2(2^{2n-1}-1)B_{n}x^{2n-1}}{(2n)!} + \cdots $ & $ 0 < x <
+	\pi  $
+\end{tabular}
+
+\begin{tabular}{ll}
+	$ \sin^{-1}{x} = x + \frac{1}{2} \frac{x^{3}}{3} +
+	\frac{1 \cdot 3}{2 \cdot 4} \frac{x^{5}}{5} + \frac{1 \cdot 3
+\cdot 5}{2 \cdot 4 \cdot 6} \frac{x^{7}}{7} + \cdots $ & $
+\abs{x} < 1 $ \\
+$ \cos^{-1}{x} = \frac{\pi}{2} - \sin^{-1}{x} = \frac{\pi}{2} - (x
++ \frac{1}{2} \frac{x^{3}}{3} + \frac{1 \cdot 3}{2 \cdot 4}
+	\frac{x^{5}}{5} ) + \cdots $ & $ \abs{x} < 1 $
+\end{tabular}
+
+\begin{tabular}{l}
+	$ \tan^{-1}{x} = \begin{cases}
+		x - \frac{x^{3}}{3} + \frac{x^{5}}{5} - \frac{x^{7}}{7}
+		+ \cdots ,  \qq{αν $\abs{x}< 1$}   \\
+		\pm \frac{\pi}{2} - \frac{1}{x} + \frac{1}{3x^{3}} -
+		\frac{1}{5 x^{5}} + \cdots , \qq{$+$ αν $\abs{x}\geq 1$, $-$
+		αν $\abs{x}\leq 1$ }
+	\end{cases} $  \\ 
+	$ \cot^{-1}{x} = \frac{\pi}{2} - \tan^{-1}{x} = \begin{cases}
+		\frac{\pi}{2} - (x - \frac{x^{3}}{3} + \frac{x^{5}}{5} -
+		\cdots), & \qq{αν $\abs{x}<1 $} \\
+		p\pi + \frac{1}{x} - \frac{1}{3x^{3}} + \frac{1}{5x^{5}} -
+		\cdots & \qq{$p=0$ αν $x>1$, $p=1$ αν $x<-1$}
+	\end{cases} $  
+\end{tabular}
+
+\begin{tabular}{ll}
+	$ \sec^{-1}{x} = \cos^{-1}{\frac{1}{x}} = \frac{\pi}{2} -
+	(\frac{1}{x} + \frac{1}{x} \frac{1}{2\cdot 3 x6{3}} +
+	\frac{1\cdot 3}{2 \cdot 4 \cdot 5x^{5}} + \cdots) $ & $ \abs{x} > 1$
+	\\
+	$ \csc^{-1}{x} = \sin^{-1}{\frac{1}{x}} = \frac{1}{x} +
+	\frac{1}{2 \cdot 3x^{3}} + \frac{1 \cdot 3}{2 \cdot 4 \cdot 5x^{5}} +
+	\cdots $ & $\abs{x}>1$
+\end{tabular}
+
+\section{Σειρές Υπερβολικών Τριγωνομετρικών Συναρτήσεων}
+
+\begin{tabular}{ll}
+	$ \sinh{x} = x + \frac{x^{3}}{3!} + \frac{x^{5}}{5!} + \frac{x^{7}}{7!} +
+	\cdots $  & $ +\infty < x < \infty $ \\
+	$ \cosh{x} = 1 + \frac{x^{2}}{2!} + \frac{x^{4}}{4!} + \frac{x^{6}}{6!} +
+	\cdots  $ & $ + \infty < x < \infty $ \\
+	$ \tanh{x} = x - \frac{x^{3}}{3} + \frac{2 x^{5}}{15} -
+	\frac{17 x^{7}}{315} + \cdots +
+	\frac{(-1)^{n}2^{2n}(2^{2n}-1)B_{n}x^{2n-1}}{(2n)!} + \cdots  $ & $
+	\abs{x}< \frac{\pi}{2} $ \\
+	$ \coth{x} = \frac{1}{x} + \frac{x}{3} - \frac{x^{3}}{45} +
+	\frac{2 x^{5}}{945} - \cdots - \frac{(-1)^{n}2^{2n}B_{n}x^{2n-1}}{(2n)!}
+	-\cdots$ & $ 0 < x < \pi $ \\
+	$ \sech{x} = 1 - \frac{x^{2}}{2} + \frac{5 x^{4}}{24} -
+	\frac{61 x^{6}}{720} + \cdots + \frac{(-1)^{n}E_{n x^{2n}}}{(2n)!} +
+	\cdots $ & $ \abs{x} < \frac{\pi}{2}  $ \\
+	$ \csch{x} = \frac{1}{x} - \frac{x}{6} + \frac{7 x^{3}}{360} -
+	\frac{31 x^{5}}{15120} + \cdots +
+	\frac{(-1)^{n}2(2^{2n-1}-1)B_{n}x^{2n-1}}{(2n)!} + \cdots $ & $ 0 < x <
+	\pi  $
+\end{tabular}
+
+\begin{tabular}{l}
+	$ \sinh^{-1}{x} =
+	\begin{cases}
+		x - \frac{x^{3}}{2 \cdot 3} + \frac{1 \cdot 3 x^{5}}{2\cdot 4 \cdot 5} -
+		\frac{1 \cdot 3 \cdot 5 x^{7}}{2 \cdot 4 \cdot 6 \cdot 7} + \cdots,
+		\qq{αν $\abs{x}<1$}   \\
+		\pm(\ln{\abs{2x}} + \frac{1}{2\cdot 2x^{2}} - \frac{1 \cdot 3}{2
+			\cdot 4 \cdot 4x^{4}} + \frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6
+		\cdot 6x^{6}} - \cdots ), \qq{$+$ αν $x \geq 1$ , $-$ αν $x\leq 1 $}  
+	\end{cases}$ \\
+	$ \cosh^{-1}{x} = \pm \left\{ \ln{(2x)} - \left( \frac{1}{2 \cdot 2x^{2}} +
+	\frac{1 \cdot 3}{2 \cdot 4 \cdot 4x^{4}} + \frac{1 \cdot 3 \cdot 5}{2 \cdot
+4 \cdot 6 \cdot 6x^{6}} + \cdots \right)\right\}$ , \qq{$+$ αν
+$\cosh^{-1}{x}>0$, $x\geq 1$,  $-$ αν $\cosh^{-1}{x} <0$, $x\geq 1$ }
+\end{tabular}
+
+\begin{tabular}{ll}
+	$ \tanh^{-1}{x} = x + \frac{x^{3}}{3} + \frac{x^{5}}{5} + \frac{x^{7}}{7}
+	+ \cdots$ & $\abs{x}<1 $ \\
+	$ \coth^{-1}{x} = \frac{1}{x} + \frac{1}{3x^{3}} + \frac{1}{5x^{5}} +
+	\frac{1}{7x^{7}} + \cdots $ & $\abs{x}>1$ 
+\end{tabular}
+
+
+\begin{tabular}{ll}
+	$ e^{\sin{x}}  = 1 + x + \frac{x^{2}}{2} + \frac{x^{3}}{2} +
+	\frac{3 x^{4}}{8} + \cdots$  & $ \abs{x} < \frac{\pi}{2} $ \\
+	$ e^{\cos{x}} = e(1 - \frac{x^{2}}{2} + \frac{x^{4}}{6} - \frac{31x^{6}}{720}
+	+ \cdots) $ & $ -\infty < x < \infty $ \\
+	$ e^{\tan{x} } = 1 + x + \frac{x^{2}}{2} + \frac{x^{3}}{2} +
+	\frac{3x^{4}}{8} + \cdots $ & $\abs{x} < \frac{\pi}{2}$
+\end{tabular}
+
+%TODO check some more powerseries
+
+
+\section{Σειρές \textlatin{Taylor} για συναρτήσεις δύο μεταβλητών}
+
+
+\[
+	f(x,y) = f(a,b) + (x-a) f_{x}(a,b) + (y-b)f_{y}(a,b) + \frac{1}{2}
+	\{(x-a)^{2}f_{xx}(a,b) + 2(x-a)(y-b)f_{xy}(a,b) + (y-b)^{2}f_{yy}(a,b) +
+	\cdots\} 
+\] όπου $ f_{x}(a,b), f_{y}(a,b), \ldots $ είναι οι μερικές παράγωγοι ως προς
+$x$, $y$, $ \ldots $ υπολογισμένες στο $ x=a $, $ y=b $.
+
+
+	
+
