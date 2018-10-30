@@ -1,0 +1,172 @@
+\section{Αριθμητικές Μέθοδοι Σύνοψης Δεδομένων}
+\twocolumnside{Μη Ομαλοποιημένα Δεδομένα}{Ομαλοποιημένα Δεδομένα}
+
+\subsection{Μέτρα θέσης - Κεντρικής Τάσης}
+
+\twocolumnside{\subsubsection{Αριθμητικός Μέσος}
+\begin{align*}
+    \overline{X} & =\frac{\sum_{i=1}^{n}X_{i}}{n} \\
+    \overline{X} & \cong\frac{\sum_{i=1}^{k}f_{i}m_{i}}{n},\; n=\sum_{i=1}^{k}f_i
+  \end{align*}}{\subsubsection{Σταθμικός Αριθμητικός Μέσος}
+  \begin{equation*}
+    \overline{X}_{w}=\frac{\sum_{i=1}^{n}w_{i}X_{i}}{\sum_{i=1}^{n}w_{i}}
+  \end{equation*}}
+
+
+\subsubsection{Διάμεσος}
+
+\twocolumnside{
+    Αν $n$ περιττός: $M$ η τιμή της παρατήρησης στη θέση $\frac{n}{2}+\frac{1}{2}$
+
+   \begin{equation*}
+   M=X_{\left(\frac{n}{2}+\frac{1}{2}\right)}
+  \end{equation*}
+    }{
+    Αν $n$ άρτιος: 
+    \begin{align*}
+      M & =\frac{1}{2}\left(X_{\left(\frac{n}{2}+1\right)}+X_{\left(\frac{n}{2}\right)}\right)\\
+      M & \cong L_{M}+\frac{\delta}{f_{M}}\left(\frac{n}{2}-F_{M-1}\right)
+    \end{align*}
+    }
+
+\subsubsection{Επικρατούσα Τιμή}
+
+$T_{0}$: Η τιμή με τη μεγαλύτερη συχνότητα εμφάνισης\hfill $T_{0}=L_{T_{0}}+\delta \frac{\Delta_{1}}{\Delta_{1}+\Delta_{2}}$
+
+
+\subsubsection{$i$-Τεταρτημόριο}
+
+Το $i=1,2,3$ τεταρτημόριο $(Q_{i})$ βρίσκεται στην $[\frac{i(n+1)}{4}]$ θέση. Η τιμή του $i=1,2,3$ τεταρτημορίου $(Q_{i})$ είναι \[Q_{i}=X_{(A_{Q})}+\Delta_{Q}[X_{(A_{Q}+1)}-X_{(A_{Q})}]\]όπου $A_{Q}$ είναι το ακέραιο μέρος του πηλίκου $[\frac{i(n+1)}{4}]$ και $\Delta_{Q}$ είναι το δεκαδικό μέρος του πηλίκου $[\frac{i(n+1)}{4}]$.
+
+\[
+Q_{i}=L_{Q_{i}}+\frac{\delta}{f_{Q_{i}}}\left(\frac{n\cdot i}{4}-F_{Q_{i}-1}\right)
+\]
+
+\subsection{Μέτρα Διασποράς}
+
+\subsubsection{Εύρος}
+\begin{multicols}{2}
+  \[
+  R=X_{max}-X_{min}
+  \]
+\end{multicols}
+
+
+\subsubsection{Ενδοτεταρτημοριακό Εύρος}
+\begin{multicols}{2}
+  \[
+  IR=Q_{3}-Q_{1}
+  \]
+
+  \[
+  IR=Q_{3}-Q_{1}
+  \]
+\end{multicols}
+
+
+\subsubsection{Τεταρτημοριακή Απόκλιση}
+
+\begin{multicols}{2}
+  \[
+  Q=\frac{Q_{3}-Q_{1}}{2}
+  \]
+
+  \[
+  Q=\frac{Q_{3}-Q_{1}}{2}
+  \]
+
+\end{multicols}
+
+\subsubsection{Διακύμανση}
+
+\begin{multicols}{2}
+  \[
+S_{\text{ορ}}^2=\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}{n}
+  \]
+  \[
+S^{2}=\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}}{n-1}
+  \]
+  \[
+S^{2}=\frac{\sum_{i=1}^{n}X_{i}^{2}-n\overline{X}^{2}}{n-1}=\frac{\sum_{i=1}^{n}X_{i}^{2}}{n-1}-\frac{(\sum_{i=1}^{n}X_{i})^{2}}{n(n-1)}
+  \]
+
+  \columnbreak
+
+\[
+S^{2}\cong \frac{\sum_{i=1}^{k}f_{i}(m_{i}-\overline{X})^{2}}{n-1},\; n=\sum_{i=1}^{k}f_{i}
+\]
+\[
+S^{2}\cong \frac{\sum_{i=1}^{k}f_{i}m_{i}^{2}-n\overline{X}^{2}}{n-1}=\frac{\sum_{i=1}^{k}f_{i}m_{i}^{2}}{n-1}-\frac{(\sum_{i=1}^{k}f_{i}m_{i})^{2}}{(n-1)n}
+\]
+
+\end{multicols}
+
+\subsubsection{Τυπική Απόκλιση}
+
+\begin{multicols}{2}
+  \[
+S_{\text{ορ}}=+\sqrt{S_{\text{ορ}}^{2}} \quad\text{ή}\quad S=+\sqrt{S^{2}}
+  \]
+
+  \[
+S=+\sqrt{S^{2}}
+  \]
+
+\end{multicols}
+
+\subsection{Μέτρα Σχετικής Μεταβλητότητας}
+
+
+\subsubsection{Συντελεστής Μεταβλητότητας}
+
+\begin{multicols}{2}
+
+  \[
+CV=\frac{S}{X}
+  \]
+
+  \[
+CV=\frac{S}{X}
+  \]
+
+\end{multicols}
+
+\subsection{Μέτρα Ασυμμετρίας}
+
+\subsubsection{Συντελεστές Ασυμμετρίας}
+
+\begin{multicols}{2}
+  \[
+S_{P}=\frac{\overline{X}-T_{0}}{S}
+  \]
+
+  \[
+  \beta_{3}=\frac{\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{3}}{n}}{S^{3}}
+  \]
+
+  \columnbreak
+
+  \[
+S_{P}=\frac{\overline{X}-T_{0}}{S}
+  \]
+
+  \[
+\beta_{3}\frac{\frac{\sum_{i=1}^{k}f_{i}(m_{i}-\overline{X})^{3}}{n}}{S^{3}}
+  \]
+
+\end{multicols}
+
+
+\subsection{Μέτρα Κύρτωσης}
+
+\subsubsection{Συντελεστής Κύρτωσης}
+
+\begin{multicols}{2}
+  \[
+  \beta_{4}=\frac{\frac{\sum_{i=1}^{n}(X_{i}-\overline{X})^{4}}{n}}{S^{4}}
+  \]
+
+  \[
+\beta_{4}=\frac{\frac{\sum_{i=1}^{k}f_{i}(m_{i}-\overline{X})^{4}}{n}}{S^{4}}
+  \]
+\end{multicols}
